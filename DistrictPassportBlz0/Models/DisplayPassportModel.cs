@@ -44,7 +44,7 @@ namespace DistrictPassportBlz0.Models
         public int CdFire { get; set; }
         public int ChildSuicides { get; set; }
         public int ChildSuicideAttempts { get; set; }
-        public int ChildMinors { get; set; }
+        public int SopMinors { get; set; }
         public int DisabledChildren { get; set; }
         public int Preschoolers { get; set; }
         public int PreschoolEducationals { get; set; }
@@ -105,7 +105,7 @@ namespace DistrictPassportBlz0.Models
         public string CdFireC { get; set; }
         public string ChildSuicidesC { get; set; }
         public string ChildSuicideAttemptsC { get; set; }
-        public string ChildMinorsC { get; set; }
+        public string SopMinorsC { get; set; }
         public string DisabledChildrenC { get; set; }
         public string PreschoolersC { get; set; }
         public string PreschoolEducationalsC { get; set; }

@@ -110,57 +110,57 @@
                 <tr>
                   <td>1. Количество детского населения  (до 18 лет)</td>
                   <td><InputNumber @bind-Value="passport.ChildPopulation" class="form-control"/></td>
-                  <td></td>
+                  <td><InputText @bind-Value="passport.ChildPopulationC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>2. Число родившихся  детей с начала календарного года</td>
                   <td><InputNumber @bind-Value="passport.Newborns" class="form-control"/></td>
-                  <td></td>
+                  <td><InputText @bind-Value="passport.NewbornsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>3. Количество умерших  детей до 1 года с начала календарного года</td>
                   <td><InputNumber @bind-Value="passport.NewbornsDeaths" class="form-control"/></td>
-                  <td></td>
+                  <td><InputText @bind-Value="passport.NewbornsDeathsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>4. Количество детей, умерших от воздействия внешних факторов, с начала календарного года</td>
                   <td><InputNumber @bind-Value="passport.ChildDeathsExternals" class="form-control"/></td>
-                  <td></td>
+                  <td><InputText @bind-Value="passport.ChildDeathsExternalsC" class="form-control"/></td>
                 </tr>
                     <tr>
                       <td style="padding-left:50px">В том числе: &nbsp;&nbsp;&nbsp; - ДТП</td>
                       <td><InputNumber @bind-Value="passport.CdMva" class="form-control"/></td>
-                      <td></td>
+                      <td><InputText @bind-Value="passport.CdMvaC" class="form-control"/></td>
                     </tr>
                     <tr>
                       <td style="padding-left:170px"> - Утопление</td>
                       <td><InputNumber @bind-Value="passport.CdDrowned" class="form-control"/></td>
-                      <td></td>
+                      <td><InputText @bind-Value="passport.CdDrownedC" class="form-control"/></td>
                     </tr>
                     <tr>
                       <td style="padding-left:170px"> - Пожары </td>
                       <td><InputNumber @bind-Value="passport.CdFire" class="form-control"/></td>
-                      <td></td>
+                      <td><InputText @bind-Value="passport.CdFireC" class="form-control"/></td>
                     </tr>
                 <tr>
                   <td>5. Количество суицидов  среди детей с начала календарного года</td>
                   <td><InputNumber @bind-Value="passport.ChildSuicides" class="form-control"/></td>
-                  <td></td>
+                  <td><InputText @bind-Value="passport.ChildSuicidesC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>6. Количество покушений на суицид среди детей с начала календарного года</td>
                   <td><InputNumber @bind-Value="passport.ChildSuicideAttempts" class="form-control"/></td>
-                  <td></td>
+                  <td><InputText @bind-Value="passport.ChildSuicideAttemptsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>7. Количество несовершеннолетних, состоящих на межведомственном учете (СОП)</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.SopMinors" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.SopMinorsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>8. Количество детей-инвалидов</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.DisabledChildren" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.DisabledChildrenC" class="form-control"/></td>
                 </tr>
               </tbody>
               <thead>
@@ -171,23 +171,23 @@
               <tbody>
                 <tr>
                   <td>1. Количество дошкольников</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Preschoolers" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.PreschoolersC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>2. Количество дошкольных образовательных организаций</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.PreschoolEducationals" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.PreschoolEducationalsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td style="padding-left:50px"> - из них, осуществляющих деятельность в отсутствии лицензии на образовательную деятельность</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.PreEdUnlicensed" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.PreEdUnlicensedC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>3. Количество детей в очереди в ДОУ</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.ChildlinePreschool" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.ChildlinePreschoolC" class="form-control"/></td>
                 </tr>
               </tbody>
               <thead>
@@ -198,33 +198,33 @@
               <tbody>
                 <tr>
                   <td>1. Количество общеобразовательных организаций</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Schools" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.SchoolsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td style="padding-left:50px"> - из них, осуществляющих деятельность в отсутствии лицензии на образовательную деятельность</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.SchUnlicensed" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.SchUnlicensedC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>2. Количество учащихся с 1 по 4 класс</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Graders1to4" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.Graders1to4C" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>3. Количество учащихся с 5 по 11 класс</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Graders5to11" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.Graders5to11C" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>4. Количество учащихся, обучающихся в форме семейного образования и самообразования</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.SelfEducated" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.SelfEducatedC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td style="padding-left:50px"> - из них прикреплены к общеобразовательным организациям в районе</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.SedAttached" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.SedAttachedC" class="form-control"/></td>
                 </tr>
               </tbody>
               <thead>
@@ -235,23 +235,23 @@
               <tbody>
                 <tr>
                   <td>1. Количество образовательных организаций среднего профессионального образования (колледжи, техникумы)</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Colleges" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.CollegesC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td style="padding-left:50px"> - из них, осуществляющих деятельность в отсутствии лицензии на образовательную деятельность</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.ClgsUnlicensed" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.ClgsUnlicensedC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>2. Количество учащихся колледжей, техникумов</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.CollegeStudents" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.CollegeStudentsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td style="padding-left:50px"> - из них иностранных граждан </td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.ClgsForeigners" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.ClgsForeignersC" class="form-control"/></td>
                 </tr>
               </tbody>
               <thead>
@@ -262,28 +262,28 @@
               <tbody>
                 <tr>
                   <td>1. Количество ВУЗов</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Universities" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.UniversitiesC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td style="padding-left:50px"> - из них, осуществляющих деятельность в отсутствии лицензии на образовательную деятельность</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.UnvUnlicensed" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.UnvUnlicensedC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>2. Количество студентов</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Students" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.StudentsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td style="padding-left:50px"> - из них иностранных граждан </td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.StForeigners" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.StForeignersC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>3. Количество общежитий</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Dormitories" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.DormitoriesC" class="form-control"/></td>
                 </tr>
               </tbody>
               <thead>
@@ -294,58 +294,58 @@
               <tbody>
                 <tr>
                   <td>1. Количество детей-сирот</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Orphans" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.OrphansC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>2. Количество приемных семей</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.FosterFamilies" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.FosterFamiliesC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>3. Количество приемных детей</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.FosterKids" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.FosterKidsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>4. Количество возвращенных из приемных семей (опекунов) детей с начала календарного года</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.FosterKidsReturned" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.FosterKidsReturnedC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td style="padding-left:50px"> - из них: по инициативе приемных родителей органов опеки </td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.FkretByFamilies" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.FkretByFamiliesC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>6. Количество детских домов (приютов) для детей-сирот</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Orphanages" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.OrphanagesC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>7. Количество воспитанников детских домов и приютов</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.LivingInOrphanages" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.LivingInOrphanagesC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>8. Количество детей, воспитываемых в семьях опекунов</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.RaisedByGuardians" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.RaisedByGuardiansC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>9. Количество усыновленных детей с начала календарного года</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.Adopted" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.AdoptedC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>10. Количество детей-сирот, достигших возраста 18 лет, нуждающихся и не обеспеченных жильем</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.HomelessAt18" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.HomelessAt18C" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>11. Количество детей-сирот, обеспеченных жильем, с начала календарного года</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.HousingAt18" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.HousingAt18C" class="form-control"/></td>
                 </tr>
               </tbody>
               <thead>
@@ -356,32 +356,32 @@
               <tbody>
                 <tr>
                   <td>1. Количество преступлений, совершенных несовершеннолетними</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.CrimesByMinors" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.CrimesByMinorsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>2. Количество преступлений, совершенных в отношении несовершеннолетних</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.CrimesAgainstMinors" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.CrimesAgainstMinorsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td>3. Количество лиц, совершивших преступления, не достигших возраста уголовной ответственности</td>
-                  <td><InputNumber @bind-Value="passport.Divorces" class="form-control"/></td>
-                  <td></td>
+                  <td><InputNumber @bind-Value="passport.ConvictedMinors" class="form-control"/></td>
+                  <td><InputText @bind-Value="passport.ConvictedMinorsC" class="form-control"/></td>
                 </tr>
               </tbody>
               <thead>
                 <tr>
                   <th>IX. Количество административных правонарушений, совершенных несовершеннолетними</th>
                   <th><InputNumber @bind-Value="passport.AdmoffensesByMinors" class="form-control"/></th>
-                  <th></th>
+                  <td><InputText @bind-Value="passport.AdmoffensesByMinorsC" class="form-control"/></td>
                 </tr>
               </thead>
               <thead>
                 <tr>
                   <th>X. Количество детей, состоящих на профилактическом учете в отделе ПДН</th>
                   <th><InputNumber @bind-Value="passport.PdnRegistered" class="form-control"/></th>
-                  <th></th>
+                  <td><InputText @bind-Value="passport.PdnRegisteredC" class="form-control"/></td>
                 </tr>
               </thead>
               <thead>
@@ -393,12 +393,12 @@
                 <tr>
                   <td style="padding-left:50px"> - наркотических средств, психотропных веществ</td>
                   <td><InputNumber @bind-Value="passport.RegisteredDrugs" class="form-control"/></td>
-                  <td></td>
+                  <td><InputText @bind-Value="passport.RegisteredDrugsC" class="form-control"/></td>
                 </tr>
                 <tr>
                   <td style="padding-left:50px"> - алкоголя</td>
                   <td><InputNumber @bind-Value="passport.RegisteredAlcohol" class="form-control"/></td>
-                  <td></td>
+                  <td><InputText @bind-Value="passport.RegisteredAlcoholC" class="form-control"/></td>
                 </tr>
               </tbody>
             </table>
