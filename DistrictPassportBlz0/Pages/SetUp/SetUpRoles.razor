@@ -1,0 +1,57 @@
+﻿@page "/SetUpRoles"
+@using Microsoft.AspNetCore.Identity
+@using Microsoft.Extensions.Configuration
+
+@inject RoleManager<IdentityRole> roleManager
+@inject UserManager<IdentityUser> userManager
+@inject IConfiguration config
+
+<h3>Set Up Roles</h3>
+<p>Роли и пользователи</p>
+
+@code {
+    protected override async Task OnParametersSetAsync()
+    {
+        await SetUpAuth();
+    }
+
+    private async Task SetUpAuth()
+    {
+
+        string[] roles = { "Admin", "Tatarstan","Kazan","Kazan2","Aviastroy","Kirovsky","Moskovsky","NovoSavinovsky","Privolzhsky","Sovetsky","Vakhitovsky","Agryz","Aksubayevo","Aktanysh","Alexeyevsk","Alkeyevsk","Almetyevsk","Apastovo","Arsk","Atninsk","Aznakayevo","Baltasi","Bavly","Bugulma","Buinsk","Chelny","Cheremshan","Chistopol ","Drozhzhanovsk","KamskoUstyinsk","Kaybitsy","Kukmory","Laishevo","Leninogorsk","Mamadysh","Mendeleyevsk","Menzelinsk","Muslyumovo","Nizhnekamsk","Novosheshminsk","Nurlat","Pestrechinsk","RybSloboda","Sabinsk","Sarmanovo","Spassk","Tetyushi","Tukayevsk","Tyulyachi","Verkhneuslon","Vysokogorsk","Yelabuga","Yutazy","Zainsk","Zelenodolsk" };
+
+        foreach(var r in roles)
+        {
+            var roleExists = await roleManager.RoleExistsAsync(r); //проверим если роль уже сущ-ет
+
+            if(roleExists == false)
+            {
+                await roleManager.CreateAsync(new IdentityRole(r));
+            }
+        }
+
+        var user = await userManager.FindByEmailAsync(config.GetValue<string>("AdminUser"));
+        if(user != null)
+        {
+            await userManager.AddToRoleAsync(user, "Admin");
+        }
+
+        var aznuser = await userManager.FindByEmailAsync(config.GetValue<string>("AznUser"));
+        if(aznuser != null)
+        {
+            await userManager.AddToRoleAsync(aznuser, "azn");
+        }
+
+        var buauser = await userManager.FindByEmailAsync(config.GetValue<string>("BuaUser"));
+        if(buauser != null)
+        {
+            await userManager.AddToRoleAsync(buauser, "bua");
+        }
+
+        var znskuser = await userManager.FindByEmailAsync(config.GetValue<string>("ZnskUser"));
+        if(znskuser != null)
+        {
+            await userManager.AddToRoleAsync(znskuser, "znsk");
+        }
+    }
+}
