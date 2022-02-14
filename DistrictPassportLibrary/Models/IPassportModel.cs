@@ -3,7 +3,6 @@ namespace DistrictPassportLibrary.Models
 {
     public interface IPassportModel
     {
-        int Id { get; set; }
         int YearInfo { get; set; }
         int QuarterInfo { get; set; }
         DateTime EntryDate { get; set; }

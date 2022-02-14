@@ -5,7 +5,6 @@ namespace DistrictPassportBlz0.Models
 {
     public class DisplayPassportModel : IPassportModel
     {
-        public int Id { get; set; }
         [Required]
         [Range(2000, 2100, ErrorMessage = "Год: за границами диапазона")]
         public int YearInfo { get; set; }

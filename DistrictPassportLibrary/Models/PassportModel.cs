@@ -8,7 +8,6 @@ namespace DistrictPassportLibrary.Models
 {
     public class PassportModel : IPassportModel
     {
-        public int Id { get; set; }
         public int YearInfo { get; set; }
         public int QuarterInfo { get; set; }
         public DateTime EntryDate { get; set; }
