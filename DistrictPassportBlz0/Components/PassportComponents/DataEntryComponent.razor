@@ -372,17 +372,16 @@
     }   
 
     private List<IPassportModel> passpCollection = new List<IPassportModel>();
-    private IPassportModel passport = new DisplayPassportModel(); //{YearInfo =  DateTime.Now.Year};
+    private IPassportModel passport = new DisplayPassportModel();
 
     private string resultMsg = "";
 
     protected override async Task OnParametersSetAsync()
     {
-        //EditionDate = DateTime.Now;
         SelectedYear = DateTime.Now.Year;
         SelectedQuater = 1;
         passpCollection = await passportData.QReadPassports(DistrictTable);
-        passport = passpCollection.FirstOrDefault(p => p.YearInfo == SelectedYear && p.QuarterInfo == SelectedQuater) ?? new DisplayPassportModel() { YearInfo =  SelectedYear, QuarterInfo = SelectedQuater}; //, EntryDate = EditionDate   await passportData.QReadPasspQuarterly(DistrictTable,1,2022);
+        passport = passpCollection.FirstOrDefault(p => p.YearInfo == SelectedYear && p.QuarterInfo == SelectedQuater) ?? new DisplayPassportModel() { YearInfo =  SelectedYear, QuarterInfo = SelectedQuater};
     }
 
     private async Task HandleValidSubmit()
