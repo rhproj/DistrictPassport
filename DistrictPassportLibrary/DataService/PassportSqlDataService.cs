@@ -214,8 +214,8 @@ namespace DistrictPassportLibrary.DataService
             string comments)
         {
             return @$"MERGE {district} WITH (SERIALIZABLE) AS T
-                    USING(VALUES({year}, {qtr}, '{entrydate}', {population}, {marriages}, {divorces},{largefamilies},{parentsdeprivedpr},{parentslimitedpr},{parentsrestoredpr},{sopparents},{sopchildren},{alimonydebtors},{alimonysumm},{onprevrecords},{childpopulation},{newborns},{newbornsdeaths},{childdeathsexternals},{cdmva},{cddrowned},{cdfire},{childsuicides},{childsuicideattempts})) 
-                    AS U([YearInfo],[QuarterInfo],[EntryDate],[DistrPopulation],[Marriages],[Divorces],[LargeFamilies],[ParentsDeprivedPr],[ParentsLimitedPr],[ParentsRestoredPr],[SopParents],[SopChildren],[AlimonyDebtors],[AlimonySumm],[OnPrevRecords],[ChildPopulation],[Newborns],[NewbornsDeaths],[ChildDeathsExternals],[CdMva],[CdDrowned],[CdFire],[ChildSuicides],[ChildSuicideAttempts])
+                    USING(VALUES({year}, {qtr}, '{entrydate}', {population}, {marriages}, {divorces},{largefamilies},{parentsdeprivedpr},{parentslimitedpr},{parentsrestoredpr},{sopparents},{sopchildren},{alimonydebtors},{alimonysumm},{onprevrecords},{childpopulation},{newborns},{newbornsdeaths},{childdeathsexternals},{cdmva},{cddrowned},{cdfire},{childsuicides},{childsuicideattempts},{sopminors},{disabledchildren},{preschoolers},{preschooleducationals},{preedunlicensed},{childlinepreschool},{schools},{schunlicensed},{graders1to4},{graders5to11},{selfeducated},{sedattached},{colleges},{clgsunlicensed},{collegestudents},{clgsforeigners},{universities},{unvunlicensed},{students},{stforeigners},{dormitories},{orphans},{fosterfamilies},{fosterkids},{fosterkidsreturned},{fkretbyfamilies},{orphanages},{livinginorphanages},{raisedbyguardians},{adopted},{homelessat18},{housingat18})) 
+                    AS U([YearInfo],[QuarterInfo],[EntryDate],[DistrPopulation],[Marriages],[Divorces],[LargeFamilies],[ParentsDeprivedPr],[ParentsLimitedPr],[ParentsRestoredPr],[SopParents],[SopChildren],[AlimonyDebtors],[AlimonySumm],[OnPrevRecords],[ChildPopulation],[Newborns],[NewbornsDeaths],[ChildDeathsExternals],[CdMva],[CdDrowned],[CdFire],[ChildSuicides],[ChildSuicideAttempts],[SopMinors],[DisabledChildren],[Preschoolers],[PreschoolEducationals],[PreEdUnlicensed],[ChildlinePreschool],[Schools],[SchUnlicensed],[Graders1to4],[Graders5to11],[SelfEducated],[SedAttached],[Colleges],[ClgsUnlicensed],[CollegeStudents],[ClgsForeigners],[Universities],[UnvUnlicensed],[Students],[StForeigners],[Dormitories],[Orphans],[FosterFamilies],[FosterKids],[FosterKidsReturned],[FkretByFamilies],[Orphanages],[LivingInOrphanages],[RaisedByGuardians],[Adopted],[HomelessAt18],[HousingAt18])
                         ON(U.[YearInfo] = T.[YearInfo] and U.[QuarterInfo] = T.[QuarterInfo])
                     WHEN MATCHED THEN
                         UPDATE SET T.[EntryDate] = U.[EntryDate],
@@ -239,10 +239,42 @@ namespace DistrictPassportLibrary.DataService
                                     T.[CdDrowned] = U.[CdDrowned], 
                                     T.[CdFire] = U.[CdFire], 
                                     T.[ChildSuicides] = U.[ChildSuicides], 
-                                    T.[ChildSuicideAttempts] = U.[ChildSuicideAttempts]
+                                    T.[ChildSuicideAttempts] = U.[ChildSuicideAttempts],
+                                    T.[SopMinors] = U.[SopMinors],
+                                    T.[DisabledChildren] = U.[DisabledChildren],
+                                    T.[Preschoolers] = U.[Preschoolers],
+                                    T.[PreschoolEducationals] = U.[PreschoolEducationals], 
+                                    T.[PreEdUnlicensed] = U.[PreEdUnlicensed], 
+                                    T.[ChildlinePreschool] = U.[ChildlinePreschool], 
+                                    T.[Schools] = U.[Schools], 
+                                    T.[SchUnlicensed] = U.[SchUnlicensed], 
+                                    T.[Graders1to4] = U.[Graders1to4], 
+                                    T.[Graders5to11] = U.[Graders5to11], 
+                                    T.[SelfEducated] = U.[SelfEducated], 
+                                    T.[SedAttached] = U.[SedAttached], 
+                                    T.[Colleges] = U.[Colleges], 
+                                    T.[ClgsUnlicensed] = U.[ClgsUnlicensed], 
+                                    T.[CollegeStudents] = U.[CollegeStudents], 
+                                    T.[ClgsForeigners] = U.[ClgsForeigners], 
+                                    T.[Universities] = U.[Universities], 
+                                    T.[UnvUnlicensed] = U.[UnvUnlicensed], 
+                                    T.[Students] = U.[Students],
+                                    T.[StForeigners] = U.[StForeigners],
+                                    T.[Dormitories] = U.[Dormitories],
+                                    T.[Orphans] = U.[Orphans], 
+                                    T.[FosterFamilies] = U.[FosterFamilies], 
+                                    T.[FosterKids] = U.[FosterKids], 
+                                    T.[FosterKidsReturned] = U.[FosterKidsReturned], 
+                                    T.[FkretByFamilies] = U.[FkretByFamilies], 
+                                    T.[Orphanages] = U.[Orphanages], 
+                                    T.[LivingInOrphanages] = U.[LivingInOrphanages], 
+                                    T.[RaisedByGuardians] = U.[RaisedByGuardians], 
+                                    T.[Adopted] = U.[Adopted], 
+                                    T.[HomelessAt18] = U.[HomelessAt18], 
+                                    T.[HousingAt18] = U.[HousingAt18]
                     WHEN NOT MATCHED THEN
-                        INSERT([YearInfo],[QuarterInfo],[EntryDate],[DistrPopulation],[Marriages],[Divorces],[LargeFamilies],[ParentsDeprivedPr],[ParentsLimitedPr],[ParentsRestoredPr],[SopParents],[SopChildren],[AlimonyDebtors],[AlimonySumm],[OnPrevRecords],[ChildPopulation],[Newborns],[NewbornsDeaths],[ChildDeathsExternals],[CdMva],[CdDrowned],[CdFire],[ChildSuicides],[ChildSuicideAttempts]) 
-                        VALUES({year}, {qtr}, '{entrydate}', {population}, {marriages}, {divorces},{largefamilies},{parentsdeprivedpr},{parentslimitedpr},{parentsrestoredpr},{sopparents},{sopchildren},{alimonydebtors},{alimonysumm},{onprevrecords},{childpopulation},{newborns},{newbornsdeaths},{childdeathsexternals},{cdmva},{cddrowned},{cdfire},{childsuicides},{childsuicideattempts});";
+                        INSERT([YearInfo],[QuarterInfo],[EntryDate],[DistrPopulation],[Marriages],[Divorces],[LargeFamilies],[ParentsDeprivedPr],[ParentsLimitedPr],[ParentsRestoredPr],[SopParents],[SopChildren],[AlimonyDebtors],[AlimonySumm],[OnPrevRecords],[ChildPopulation],[Newborns],[NewbornsDeaths],[ChildDeathsExternals],[CdMva],[CdDrowned],[CdFire],[ChildSuicides],[ChildSuicideAttempts],[SopMinors],[DisabledChildren],[Preschoolers],[PreschoolEducationals],[PreEdUnlicensed],[ChildlinePreschool],[Schools],[SchUnlicensed],[Graders1to4],[Graders5to11],[SelfEducated],[SedAttached],[Colleges],[ClgsUnlicensed],[CollegeStudents],[ClgsForeigners],[Universities],[UnvUnlicensed],[Students],[StForeigners],[Dormitories],[Orphans],[FosterFamilies],[FosterKids],[FosterKidsReturned],[FkretByFamilies],[Orphanages],[LivingInOrphanages],[RaisedByGuardians],[Adopted],[HomelessAt18],[HousingAt18]) 
+                        VALUES({year}, {qtr}, '{entrydate}', {population}, {marriages}, {divorces},{largefamilies},{parentsdeprivedpr},{parentslimitedpr},{parentsrestoredpr},{sopparents},{sopchildren},{alimonydebtors},{alimonysumm},{onprevrecords},{childpopulation},{newborns},{newbornsdeaths},{childdeathsexternals},{cdmva},{cddrowned},{cdfire},{childsuicides},{childsuicideattempts},{sopminors},{disabledchildren},{preschoolers},{preschooleducationals},{preedunlicensed},{childlinepreschool},{schools},{schunlicensed},{graders1to4},{graders5to11},{selfeducated},{sedattached},{colleges},{clgsunlicensed},{collegestudents},{clgsforeigners},{universities},{unvunlicensed},{students},{stforeigners},{dormitories},{orphans},{fosterfamilies},{fosterkids},{fosterkidsreturned},{fkretbyfamilies},{orphanages},{livinginorphanages},{raisedbyguardians},{adopted},{homelessat18},{housingat18});";
         }
     }
 }
