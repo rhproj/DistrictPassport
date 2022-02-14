@@ -17,6 +17,7 @@ namespace DistrictPassportLibrary.DataAccess
         public SqlDataAccess(IConfiguration config)
         {
             _config = config;
+            SqlMapper.AddTypeMap(typeof(DateTime), System.Data.DbType.DateTime2);
         }
 
 

@@ -3,14 +3,6 @@ namespace DistrictPassportLibrary.Models
 {
     public interface IPassportModel
     {
-        //DateTime Date { get; set; }
-        //int Divorces { get; set; }
-        //int Id { get; set; }
-        //int Marriages { get; set; }
-        //int Population { get; set; }
-        //int Quarter { get; set; }
-        //int YearInfo { get; set; }
-
         int Id { get; set; }
         int YearInfo { get; set; }
         int QuarterInfo { get; set; }
@@ -75,67 +67,6 @@ namespace DistrictPassportLibrary.Models
         int PdnRegistered { get; set; }
         int RegisteredDrugs { get; set; }
         int RegisteredAlcohol { get; set; }
-
-        string DistrPopulationC { get; set; }
-        string MarriagesC { get; set; }
-        string DivorcesC { get; set; }
-        string LargeFamiliesC { get; set; }
-        string ParentsDeprivedPrC { get; set; }
-        string ParentsLimitedPrC { get; set; }
-        string ParentsRestoredPrC { get; set; }
-        string SopParentsC { get; set; }
-        string SopChildrenC { get; set; }
-        string AlimonyDebtorsC { get; set; }
-        string AlimonySummC { get; set; }
-        string OnPrevRecordsC { get; set; }
-        string ChildPopulationC { get; set; }
-        string NewbornsC { get; set; }
-        string NewbornsDeathsC { get; set; }
-        string ChildDeathsExternalsC { get; set; }
-        string CdMvaC { get; set; }
-        string CdDrownedC { get; set; }
-        string CdFireC { get; set; }
-        string ChildSuicidesC { get; set; }
-        string ChildSuicideAttemptsC { get; set; }
-        string SopMinorsC { get; set; }
-        string DisabledChildrenC { get; set; }
-        string PreschoolersC { get; set; }
-        string PreschoolEducationalsC { get; set; }
-        string PreEdUnlicensedC { get; set; }
-        string ChildlinePreschoolC { get; set; }
-        string SchoolsC { get; set; }
-        string SchUnlicensedC { get; set; }
-        string Graders1to4C { get; set; }
-        string Graders5to11C { get; set; }
-        string SelfEducatedC { get; set; }
-        string SedAttachedC { get; set; }
-        string CollegesC { get; set; }
-        string ClgsUnlicensedC { get; set; }
-        string CollegeStudentsC { get; set; }
-        string ClgsForeignersC { get; set; }
-        string UniversitiesC { get; set; }
-        string UnvUnlicensedC { get; set; }
-        string StudentsC { get; set; }
-        string StForeignersC { get; set; }
-        string DormitoriesC { get; set; }
-        string OrphansC { get; set; }
-        string FosterFamiliesC { get; set; }
-        string FosterKidsC { get; set; }
-        string FosterKidsReturnedC { get; set; }
-        string FkretByFamiliesC { get; set; }
-        string OrphanagesC { get; set; }
-        string LivingInOrphanagesC { get; set; }
-        string RaisedByGuardiansC { get; set; }
-        string AdoptedC { get; set; }
-        string HomelessAt18C { get; set; }
-        string HousingAt18C { get; set; }
-        string CrimesByMinorsC { get; set; }
-        string CrimesAgainstMinorsC { get; set; }
-        string ConvictedMinorsC { get; set; }
-        string AdmoffensesByMinorsC { get; set; }
-        string PdnRegisteredC { get; set; }
-        string RegisteredDrugsC { get; set; }
-        string RegisteredAlcoholC { get; set; }
         string Comments { get; set; }
 
     }
