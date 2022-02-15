@@ -6,30 +6,28 @@
 
     <EditForm Model= "@passport" OnValidSubmit="HandleValidSubmit">
         <div class="container">
-            <div class="row g-3 align-items-center">
-                <div class="col-auto">
+            <div class="d-flex bd-highlight mb-3">
+              <div class="p-2 bd-highlight">
                   <label class="col-form-label">Год:</label>
-                </div>
-                <div class="col-auto">
+              </div>
+              <div class="p-2 bd-highlight">
                   <InputNumber @bind-Value="SelectedYear" class="form-control"/>
-                </div>
-                <div class="col-auto">
-                  <label class="col-form-label">
-                       <select @bind="SelectedQuater" class="dropdown-header">
-                            <option value=1>I - квартал</option>
-                            <option value=2>II - квартал</option>
-                            <option value=3>III - квартал</option>
-                            <option value=4>IV - квартал</option>
-                        </select>
-                  </label>
-                </div>
-               <div class="col-auto">
-                    <InputDate @bind-Value="passport.EntryDate" class="form-control"></InputDate>
-                </div>
-                <div class="col-auto">
-                    <button class="btn btn-outline-primary" @onclick=@GoToOverviewPage>Данные за период</button>
-                </div>
-             </div>
+              </div>
+              <div class="p-2 bd-highlight">
+                   <select @bind="SelectedQuater" class="dropdown-header">
+                     <option value=1>I - квартал</option>
+                     <option value=2>II - квартал</option>
+                     <option value=3>III - квартал</option>
+                     <option value=4>IV - квартал</option>
+                   </select>
+              </div>
+              <div class="p-2 bd-highlight">
+                  <InputDate @bind-Value="passport.EntryDate" class="form-control"></InputDate>
+              </div>
+              <div class="ms-auto p-2 bd-highlight">
+                  <button class="btn btn-outline-info" @onclick=@GoToOverviewPage>Данные за все время</button>
+              </div>
+            </div>
 
             <table class="table table-bordered">
               <thead>
@@ -347,7 +345,7 @@
                 <p class="text-success">@resultMsg</p>
                 <DataAnnotationsValidator/>
                 <ValidationSummary/>
-            <button class="btn btn-primary" type="submit">Записать Данные</button>
+            <button class="btn btn-outline-primary btn-lg float-end" type="submit">Записать Данные</button>
         </div>
     </EditForm>
 
