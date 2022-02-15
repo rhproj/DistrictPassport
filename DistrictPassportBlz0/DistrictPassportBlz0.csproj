@@ -19,8 +19,4 @@
     <ProjectReference Include="..\DistrictPassportLibrary\DistrictPassportLibrary.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Pages\TTR\Zelenodolsk\" />
-  </ItemGroup>
-
 </Project>

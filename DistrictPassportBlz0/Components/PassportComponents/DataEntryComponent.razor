@@ -342,7 +342,7 @@
                 </tr>
               </tbody>
             </table>
-                <p class="text-success">@resultMsg</p>
+                <p class="h3 text-success text-end">@resultMsg</p>
                 <DataAnnotationsValidator/>
                 <ValidationSummary/>
             <button class="btn btn-outline-primary btn-lg float-end" type="submit">Записать Данные</button>
@@ -389,7 +389,7 @@
     private async Task HandleValidSubmit()
     {
         await passportData.QAddData(passport, DistrictTable);
-        resultMsg = "Данные сохранены";
+        resultMsg = "Данные сохранены!";
         passpCollection = await passportData.QReadPassports(DistrictTable);
     }
 
