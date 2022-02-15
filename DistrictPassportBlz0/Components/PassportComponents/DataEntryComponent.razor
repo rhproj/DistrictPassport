@@ -24,9 +24,12 @@
               <div class="p-2 bd-highlight">
                   <InputDate @bind-Value="passport.EntryDate" class="form-control"></InputDate>
               </div>
-              <div class="ms-auto p-2 bd-highlight">
-                  <button class="btn btn-outline-info" @onclick=@GoToOverviewPage>Данные за все время</button>
-              </div>
+              @if(passpCollection.Count > 0)
+              {
+                <div class="ms-auto p-2 bd-highlight">
+                    <button class="btn btn-outline-info" @onclick=@GoToOverviewPage>Данные за все время</button>
+                </div>                
+              }
             </div>
 
             <table class="table table-bordered">
@@ -345,7 +348,7 @@
                 <p class="h3 text-success text-end">@resultMsg</p>
                 <DataAnnotationsValidator/>
                 <ValidationSummary/>
-            <button class="btn btn-outline-primary btn-lg float-end" type="submit">Записать Данные</button>
+            <button class="btn btn-outline-primary btn-lg float-end" type="submit" disabled="@(!context.Validate())">Записать Данные</button>
         </div>
     </EditForm>
 
@@ -356,6 +359,9 @@
 
     [Parameter]
     public string DistrictTable { get; set; }
+
+    [Parameter]
+    public string OverviewPage { get; set; }
 
     public DateTime EditionDate { get; set; }
 
@@ -408,7 +414,7 @@
 
     private void GoToOverviewPage()
     {
-        UriHelper.NavigateTo("/ttr/zainskoverview");
+        UriHelper.NavigateTo(OverviewPage);
     }
 }
 
