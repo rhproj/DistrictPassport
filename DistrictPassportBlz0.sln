@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistrictPassportBlz0", "DistrictPassportBlz0\DistrictPassportBlz0.csproj", "{44EB426A-13DC-4726-BCF3-275F75913EAA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistrictPassportBlz0", "DistrictPassportBlz0\DistrictPassportBlz0.csproj", "{44EB426A-13DC-4726-BCF3-275F75913EAA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DistrictPassportLibrary", "DistrictPassportLibrary\DistrictPassportLibrary.csproj", "{72EFFE88-5083-434F-AB59-CF720AEFEBCF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DistrictPassportLibrary", "DistrictPassportLibrary\DistrictPassportLibrary.csproj", "{72EFFE88-5083-434F-AB59-CF720AEFEBCF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

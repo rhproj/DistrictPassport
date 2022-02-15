@@ -1,0 +1,496 @@
+﻿@inject IPassportDataService passportData
+<style> 
+  .scrolltable th, td {
+white-space: nowrap;
+}
+</style> 
+<h2>@DistrictName: Пасспорт района, данные за все время</h2>
+
+@if(passports == null)
+{
+    <h4>Загружается...</h4>
+}
+else
+{
+    <div class="scrolltable">
+     <table class="table table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <td>Год / Кватрал</td>
+          @foreach(var p in passports)
+          {
+              <th>@p.YearInfo / @p.QuarterInfo</th>
+          }
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th>I. Семья</th>
+        </tr>
+        <tr>
+          <td>1. Численность населения</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.DistrPopulation</td>
+          }
+        </tr>
+        <tr>
+          <td>2. Количество заключенных браков с начала календарного года</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.Marriages</td>
+          }
+        </tr>
+        <tr>
+          <td>3. Количество разводов с начала календарного года</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.Divorces</td>
+          }
+        </tr>
+        <tr>
+          <td>4. Количество многодетных семей</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.LargeFamilies</td>
+          }
+        </tr>
+        <tr>
+          <td>5. Количество родителей:</td>
+        </tr>
+        <tr>
+        <td style="padding-left:50px"> - лишенных родительских правах</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.ParentsDeprivedPr</td>
+          }
+        </tr>
+        <tr>
+        <td style="padding-left:50px"> - ограниченных в родительских правах</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.ParentsLimitedPr</td>
+          }
+        </tr>
+        <tr>
+        <td style="padding-left:50px"> - восстановленных в родительских правах</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.ParentsRestoredPr</td>
+          }
+        </tr>
+        <tr>
+          <td>6. Количество родителей, состоящих на межведомственном учете (СОП)</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.SopParents</td>
+          }
+        </tr>
+        <tr>
+          <td style="padding-left:50px"> - количество в них детей</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.SopChildren</td>
+          }
+        </tr>
+        <tr>
+          <td>7. Количество исполнительных производств по алиментам/должников</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.AlimonyDebtors</td>
+          }
+        </tr>
+        <tr>
+          <td>8. Сумма долга по алиментам</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.AlimonySumm</td>
+          }
+        </tr>
+        <tr>
+        <td>9. Количество родителей, состоящих на профилактическом учете</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.OnPrevRecords</td>
+          }
+        </tr>
+        <tr>
+          <th>II. Дети</th>
+        </tr>
+        <tr>
+        <td>1. Количество детского населения (до 18 лет)</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.ChildPopulation</td>
+          }
+        </tr>
+        <tr>
+        <td>2. Число родившихся  детей с начала календарного года</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.Newborns</td>
+          }
+        </tr>
+        <tr>
+        <td>3. Количество умерших  детей до 1 года с начала календарного года</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.NewbornsDeaths</td>
+          }
+        </tr>
+        <tr>
+        <td>4. Количество детей, умерших от воздействия внешних факторов, с начала календарного года</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.ChildDeathsExternals</td>
+          }
+        </tr>
+        <tr>
+        <td style="padding-left:50px">В том числе: &nbsp;&nbsp;&nbsp; - ДТП</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.CdMva</td>
+          }
+        </tr>
+        <tr>
+        <td style="padding-left:170px"> - Утопление</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.CdDrowned</td>
+          }
+        </tr>
+        <tr>
+        <td style="padding-left:170px"> - Пожары</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.CdFire</td>
+          }
+        </tr>
+        <tr>
+        <td>5. Количество суицидов  среди детей с начала календарного года</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.ChildSuicides</td>
+          }
+        </tr>
+        <tr>
+        <td>6. Количество покушений на суицид среди детей с начала календарного года</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.ChildSuicideAttempts</td>
+          }
+        </tr>
+        <tr>
+          <td>7. Количество несовершеннолетних, состоящих на межведомственном учете (СОП)</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.SopMinors</td>
+          }
+        </tr>
+        <tr>
+          <td>8. Количество детей-инвалидов</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.DisabledChildren</td>
+          }
+        </tr>
+        <tr>
+           <th>III. ДОУ</th>
+        </tr>
+        <tr>
+          <td>1. Количество дошкольников</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.Preschoolers</td>
+          }
+        </tr>
+        <tr>
+          <td>2. Количество дошкольных образовательных организаций</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.PreschoolEducationals</td>
+          }
+        </tr>
+        <tr>
+        <td style="padding-left:50px">- из них, осуществляющих деятельность в отсутствии лицензии на образовательную деятельность</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.PreEdUnlicensed</td>
+           }
+        </tr>
+        <tr>
+          <td>3. Количество детей в очереди в ДОУ</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.ChildlinePreschool</td>
+           }
+        </tr>
+        <tr>
+          <th>IV. Школы</th>
+        </tr>
+        <tr>
+          <td>1. Количество общеобразовательных организаций</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Schools</td>
+           }
+        </tr>
+        <tr>
+        <td style="padding-left:50px">- из них, осуществляющих деятельность в отсутствии лицензии на образовательную деятельность</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.SchUnlicensed</td>
+           }
+        </tr>
+        <tr>
+          <td>2. Количество учащихся с 1 по 4 класс</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Graders1to4</td>
+           }
+        </tr>
+        <tr>
+          <td>3. Количество учащихся с 5 по 11 класс</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Graders5to11</td>
+           }
+        </tr>
+        <tr>
+           <td>4. Количество учащихся, обучающихся в форме семейного образования и самообразования</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.SelfEducated</td>
+           }
+        </tr>
+        <tr>
+           <td style="padding-left:50px"> - из них прикреплены к общеобразовательным организациям в районе</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.SedAttached</td>
+           }
+        </tr>
+        <tr>
+          <th>V. СУЗы</th>
+        </tr>
+        <tr>
+           <td>1. Количество образовательных организаций среднего профессионального образования (колледжи, техникумы)</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Colleges</td>
+           }
+        </tr>
+        <tr>
+           <td style="padding-left:50px">  - из них, осуществляющих деятельность в отсутствии лицензии на образовательную деятельность</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.ClgsUnlicensed</td>
+           }
+        </tr>
+        <tr>
+           <td>2. Количество учащихся колледжей, техникумов</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.CollegeStudents</td>
+           }
+        </tr>
+        <tr>
+           <td style="padding-left:50px"> - из них иностранных граждан</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.ClgsForeigners</td>
+           }
+        </tr>
+        <tr>
+          <th>VI. ВУЗы</th>
+        </tr>
+        <tr>
+          <td>1. Количество ВУЗов</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Universities</td>
+           }
+        </tr>
+        <tr>
+           <td style="padding-left:50px"> - из них, осуществляющих деятельность в отсутствии лицензии на образовательную деятельность</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.UnvUnlicensed</td>
+           }
+        </tr>
+        <tr>
+          <td>2. Количество студентов</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Students</td>
+           }
+        </tr>
+        <tr>
+           <td style="padding-left:50px"> - из них иностранных граждан</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.StForeigners</td>
+           }
+        </tr>
+        <tr>
+        <td>3. Количество общежитий</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Dormitories</td>
+           }
+        </tr>
+         <tr>
+           <th>VII. Дети-сироты</th>
+         </tr>
+         <tr>
+           <td>1. Количество детей-сирот</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Orphans</td>
+           }
+         </tr>
+         <tr>
+           <td>2. Количество приемных семей</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.FosterFamilies</td>
+           }
+         </tr>
+         <tr>
+           <td>3. Количество приемных детей</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.FosterKids</td>
+           }
+         </tr>
+         <tr>
+           <td>4. Количество возвращенных из приемных семей (опекунов) детей с начала календарного года</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.FosterKidsReturned</td>
+           }
+         </tr>
+         <tr>
+           <td style="padding-left:50px"> - из них: по инициативе приемных родителей органов опеки </td>
+           @foreach(var p in passports)
+           {
+               <td>@p.FkretByFamilies</td>
+           }
+         </tr>
+         <tr>
+           <td>6. Количество детских домов (приютов) для детей-сирот</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Orphanages</td>
+           }
+         </tr>
+         <tr>
+           <td>7. Количество воспитанников детских домов и приютов</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.LivingInOrphanages</td>
+           }
+         </tr>
+         <tr>
+           <td>8. Количество детей, воспитываемых в семьях опекунов</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.RaisedByGuardians</td>
+           }
+         </tr>
+         <tr>
+           <td>9. Количество усыновленных детей с начала календарного года</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.Adopted</td>
+           }
+         </tr>
+         <tr>
+           <td>10. Количество детей-сирот, достигших возраста 18 лет, нуждающихся и не обеспеченных жильем</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.HomelessAt18</td>
+           }
+         </tr>
+         <tr>
+           <td>11. Количество детей-сирот, обеспеченных жильем, с начала календарного года</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.HousingAt18</td>
+           }
+         </tr>
+         <tr>
+           <th>VIII. Преступность несовершеннолетних и в отношении них</th>
+         </tr>
+         <tr>
+           <td>1. Количество преступлений, совершенных несовершеннолетними</td>
+          @foreach(var p in passports)
+           {
+               <td>@p.CrimesByMinors</td>
+           }
+         </tr>
+         <tr>
+           <td>2. Количество преступлений, совершенных в отношении несовершеннолетних</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.CrimesAgainstMinors</td>
+           }
+         </tr>
+         <tr>
+           <td>3. Количество лиц, совершивших преступления, не достигших возраста уголовной ответственности</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.ConvictedMinors</td>
+           }
+         </tr>
+         <tr>
+           <th>IX. Количество административных правонарушений, совершенных несовершеннолетними</th>
+           @foreach(var p in passports)
+           {
+               <td>@p.AdmoffensesByMinors</td>
+           }
+         </tr>
+         <tr>
+           <th>X. Количество детей, состоящих на профилактическом учете в отделе ПДН</th>
+           @foreach(var p in passports)
+           {
+               <td>@p.PdnRegistered</td>
+           }
+         </tr>
+         <tr>
+           <th>XI. Количество детей, состоящих на учете за употребление:</th>
+         </tr>
+         <tr>
+           <td style="padding-left:50px"> - наркотических средств, психотропных веществ</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.RegisteredDrugs</td>
+           }
+         </tr>
+         <tr>
+           <td style="padding-left:50px"> - алкоголя</td>
+           @foreach(var p in passports)
+           {
+               <td>@p.RegisteredAlcohol</td>
+           }
+         </tr>
+      </tbody>
+     </table>
+    </div>
+
+}
+
+@code {
+    [Parameter]
+    public string DistrictName { get; set; }
+
+    [Parameter]
+    public string DistrictTable { get; set; }
+
+    private List<IPassportModel> passports;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        passports = await passportData.QReadPassportsInOrder(DistrictTable);
+    }
+}

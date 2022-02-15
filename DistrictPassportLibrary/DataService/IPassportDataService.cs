@@ -10,6 +10,7 @@ namespace DistrictPassportLibrary.DataService
     public interface IPassportDataService
     {
         Task<List<IPassportModel>> QReadPassports(string district);
+        Task<List<IPassportModel>> QReadPassportsInOrder(string district);
         Task QAddData(IPassportModel passport, string district);
         //Task<IPassportModel> QReadPasspQuarterly(string district, int quart, int year);
     }

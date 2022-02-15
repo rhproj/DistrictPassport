@@ -1,4 +1,5 @@
 ﻿@inject IPassportDataService passportData
+@inject NavigationManager UriHelper
 
 <h2>@DistrictName: Пасспорт района, ввод данных</h2>
 
@@ -24,6 +25,9 @@
                 </div>
                <div class="col-auto">
                     <InputDate @bind-Value="passport.EntryDate" class="form-control"></InputDate>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-outline-primary" @onclick=@GoToOverviewPage>Данные за период</button>
                 </div>
              </div>
 
@@ -94,7 +98,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>1. Количество детского населения  (до 18 лет)</td>
+                  <td>1. Количество детского населения (до 18 лет)</td>
                   <td><InputNumber @bind-Value="passport.ChildPopulation" class="form-control"/></td>
                 </tr>
                 <tr>
@@ -403,5 +407,10 @@
         resultMsg = "";
     }
 
+
+    private void GoToOverviewPage()
+    {
+        UriHelper.NavigateTo("/ttr/zainskoverview");
+    }
 }
 
