@@ -4,7 +4,7 @@
 <h2>@DistrictName: Пасспорт района, ввод данных</h2>
 
 
-    <EditForm Model= "@passport" OnValidSubmit="HandleValidSubmit">
+    <EditForm Model= "@passport">
         <div class="container">
             <div class="d-flex bd-highlight mb-3">
               <div class="p-2 bd-highlight">
@@ -345,10 +345,6 @@
                 </tr>
               </tbody>
             </table>
-                <p class="h3 text-success text-end">@resultMsg</p>
-                <DataAnnotationsValidator/>
-                <ValidationSummary/>
-                <button class="btn btn-outline-primary btn-lg float-end" type="submit">Записать Данные</button>
         </div>
     </EditForm>
 
@@ -381,8 +377,6 @@
     private List<IPassportModel> passpCollection = new List<IPassportModel>();
     private IPassportModel passport = new DisplayPassportModel();
 
-    private string resultMsg = "";
-
     protected override async Task OnParametersSetAsync()
     {
         SelectedYear = DateTime.Now.Year;
@@ -391,25 +385,15 @@
         passport = passpCollection.FirstOrDefault(p => p.YearInfo == SelectedYear && p.QuarterInfo == SelectedQuater) ?? new DisplayPassportModel() { YearInfo =  SelectedYear, QuarterInfo = SelectedQuater};
     }
 
-    private async Task HandleValidSubmit()
-    {
-        await passportData.QAddData(passport, DistrictTable);
-        resultMsg = "Данные сохранены!";
-        passpCollection = await passportData.QReadPassports(DistrictTable);
-    }
-
     private void LoadDataYear(int year)
     {
         passport = passpCollection.FirstOrDefault(p=>  p.YearInfo == year && p.QuarterInfo == SelectedQuater ) ?? new DisplayPassportModel() { YearInfo =  year, QuarterInfo = SelectedQuater};
-        resultMsg = "";
     }
 
     private void LoadDataQuarter(int quarter)
     {
         passport = passpCollection.FirstOrDefault(p=>  p.YearInfo == SelectedYear && p.QuarterInfo == quarter) ?? new DisplayPassportModel() { YearInfo =  SelectedYear, QuarterInfo = quarter};
-        resultMsg = "";
     }
-
 
     private void GoToOverviewPage()
     {

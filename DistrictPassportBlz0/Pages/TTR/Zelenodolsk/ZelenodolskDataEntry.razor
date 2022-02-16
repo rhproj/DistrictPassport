@@ -1,4 +1,11 @@
 ﻿@page "/ttr/zelenodolskentry"
 
-<DataEntryComponent DistrictName="Зеленодольский район" OverviewPage="/ttr/zelenodolskoverview" DistrictTable="[dbo].[ZelenodolskPsp]">
-</DataEntryComponent>
+<AuthorizeView Roles="Zelenodolsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Зеленодольский район" OverviewPage="/ttr/zelenodolskoverview" DistrictTable="[dbo].[ZelenodolskPsp]">
+        </DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Зеленодольский район" OverviewPage="/ttr/zelenodolskoverview" DistrictTable="[dbo].[ZelenodolskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>
