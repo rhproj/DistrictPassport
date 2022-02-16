@@ -345,11 +345,21 @@
                 </tr>
               </tbody>
             </table>
-                <p class="h3 text-success text-end">@resultMsg</p>
-                <DataAnnotationsValidator/>
-                <ValidationSummary/>
-                <button class="btn btn-outline-primary btn-lg float-end" type="submit">Записать Данные</button>
-        </div>
+            <div>
+                <button class="btn btn-secondary" @onclick="ToggleShowComments">Примечание</button>
+                @if (showcomments == true)
+                {
+                    <textarea @bind="passport.Comments" style="width: 100%;" placeholder="Примечание">
+
+                    </textarea>
+                    //<input type="text" @bind-value="passport.Comments" /> 
+                    //<InputText @bind-Value="passport.Comments" style="width: 100%;" placeholder="Примечание"></InputText>    
+                }
+            </div>
+                    <DataAnnotationsValidator/>
+                    <ValidationSummary/>
+                    <button class="btn btn-outline-primary btn-lg float-end" type="submit">Записать Данные</button>
+            </div>
     </EditForm>
 
 
@@ -363,6 +373,7 @@
     [Parameter]
     public string OverviewPage { get; set; }
 
+    private bool showcomments;
 
     private int _selectedYear;
     public int SelectedYear
@@ -410,10 +421,14 @@
         resultMsg = "";
     }
 
-
     private void GoToOverviewPage()
     {
         UriHelper.NavigateTo(OverviewPage);
+    }
+
+    private void ToggleShowComments()
+    {
+        showcomments = !showcomments;
     }
 }
 

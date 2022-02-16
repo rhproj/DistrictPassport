@@ -22,7 +22,7 @@
                    </select>
               </div>
               <div class="p-2 bd-highlight">
-                  <InputDate @bind-Value="passport.EntryDate" class="form-control"></InputDate>
+                  <InputDate @bind-Value="passport.EntryDate" class="form-control" disabled="true"></InputDate>
               </div>
               @if(passpCollection.Count > 0)
               {
@@ -31,7 +31,7 @@
                 </div>                
               }
             </div>
-
+            <fieldset disabled="true">
             <table class="table table-bordered">
               <thead>
                 <tr>
@@ -345,6 +345,8 @@
                 </tr>
               </tbody>
             </table>
+            </fieldset>
+
         </div>
     </EditForm>
 

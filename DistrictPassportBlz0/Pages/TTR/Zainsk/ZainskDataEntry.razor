@@ -2,8 +2,7 @@
 
 <AuthorizeView Roles="Zainsk,Admin">
     <Authorized>
-        <DataEntryComponent DistrictName="Заинский район" OverviewPage="/ttr/zainskoverview" DistrictTable="[dbo].[ZainskPsp]">
-        </DataEntryComponent>
+        <DataEntryComponent DistrictName="Заинский район" OverviewPage="/ttr/zainskoverview" DistrictTable="[dbo].[ZainskPsp]"></DataEntryComponent>
     </Authorized>
     <NotAuthorized>
         <DataReadOnlyComponent DistrictName="Заинский район" OverviewPage="/ttr/zainskoverview" DistrictTable="[dbo].[ZainskPsp]"></DataReadOnlyComponent>
