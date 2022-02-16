@@ -1,4 +1,10 @@
-﻿@page "/ttr/Kazan/Kirovsky"
+﻿@page "/ttr/kazan/kirovskyentry"
 
-<DataEntryComponent DistrictName="Кировский район" OverviewPage="/ttr/Kazan/Kirovskyoverview" DistrictTable="[dbo].[KirovskyPsp]">
-</DataEntryComponent>
+<AuthorizeView Roles="Kirovsky,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Кировский район г.Казани" OverviewPage="/ttr/kazan/kirovskyoverview" DistrictTable="[dbo].[KirovskyPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Кировский район г.Казани" OverviewPage="/ttr/kazan/kirovskyoverview" DistrictTable="[dbo].[KirovskyPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

@@ -1,4 +1,10 @@
-﻿@page "/ttr/Kazan/Moskovsky"
+﻿@page "/ttr/kazan/moskovskyentry"
 
-<DataEntryComponent DistrictName="Московский район" OverviewPage="/ttr/Kazan/Moskovskyoverview" DistrictTable="[dbo].[MoskovskyPsp]">
-</DataEntryComponent>
+<AuthorizeView Roles="Moskovsky,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Московский район г.Казани" OverviewPage="/ttr/kazan/moskovskyoverview" DistrictTable="[dbo].[MoskovskyPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Московский район г.Казани" OverviewPage="/ttr/kazan/moskovskyoverview" DistrictTable="[dbo].[MoskovskyPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

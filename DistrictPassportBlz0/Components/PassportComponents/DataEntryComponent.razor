@@ -2,8 +2,12 @@
 @inject NavigationManager UriHelper
 
 <h2>@DistrictName: Пасспорт района, ввод данных</h2>
-
-
+@if(passport == null)
+{
+    <h3>Загружается...</h3>
+}
+else
+{
     <EditForm Model= "@passport" OnValidSubmit="HandleValidSubmit">
         <div class="container">
             <div class="d-flex bd-highlight mb-3">
@@ -355,7 +359,9 @@
                     <ValidationSummary/>
                     <button class="btn btn-outline-primary btn-lg float-end" type="submit" disabled="@(!context.Validate())">Записать Данные</button>
             </div>
-    </EditForm>
+    </EditForm>    
+}
+
 
 
 @code {

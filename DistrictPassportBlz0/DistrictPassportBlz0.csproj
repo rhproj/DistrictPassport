@@ -19,4 +19,53 @@
     <ProjectReference Include="..\DistrictPassportLibrary\DistrictPassportLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\TTR\Agryz\" />
+    <Folder Include="Pages\TTR\Aksubayevo\" />
+    <Folder Include="Pages\TTR\Aktanysh\" />
+    <Folder Include="Pages\TTR\Alexeyevsk\" />
+    <Folder Include="Pages\TTR\Alkeyevsk\" />
+    <Folder Include="Pages\TTR\Almetyevsk\" />
+    <Folder Include="Pages\TTR\Apastovo\" />
+    <Folder Include="Pages\TTR\Arsk\" />
+    <Folder Include="Pages\TTR\Atninsk\" />
+    <Folder Include="Pages\TTR\Aznakayevo\" />
+    <Folder Include="Pages\TTR\Baltasi\" />
+    <Folder Include="Pages\TTR\Bavly\" />
+    <Folder Include="Pages\TTR\Bugulma\" />
+    <Folder Include="Pages\TTR\Buinsk\" />
+    <Folder Include="Pages\TTR\Chelny\" />
+    <Folder Include="Pages\TTR\Cheremshan\" />
+    <Folder Include="Pages\TTR\Chistopol\" />
+    <Folder Include="Pages\TTR\Drozhzhanovsk\" />
+    <Folder Include="Pages\TTR\KamskoUstyinsk\" />
+    <Folder Include="Pages\TTR\Kaybitsy\" />
+    <Folder Include="Pages\TTR\Kazan\NovoSavinovsky\" />
+    <Folder Include="Pages\TTR\Kazan\Privolzhsky\" />
+    <Folder Include="Pages\TTR\Kazan\Sovetsky\" />
+    <Folder Include="Pages\TTR\Kazan\Vakhitovsky\" />
+    <Folder Include="Pages\TTR\Kukmory\" />
+    <Folder Include="Pages\TTR\Laishevo\" />
+    <Folder Include="Pages\TTR\Leninogorsk\" />
+    <Folder Include="Pages\TTR\Mamadysh\" />
+    <Folder Include="Pages\TTR\Mendeleyevsk\" />
+    <Folder Include="Pages\TTR\Menzelinsk\" />
+    <Folder Include="Pages\TTR\Muslyumovo\" />
+    <Folder Include="Pages\TTR\Nizhnekamsk\" />
+    <Folder Include="Pages\TTR\Novosheshminsk\" />
+    <Folder Include="Pages\TTR\Nurlat\" />
+    <Folder Include="Pages\TTR\Pestrechinsk\" />
+    <Folder Include="Pages\TTR\RybSloboda\" />
+    <Folder Include="Pages\TTR\Sabinsk\" />
+    <Folder Include="Pages\TTR\Sarmanovo\" />
+    <Folder Include="Pages\TTR\Spassk\" />
+    <Folder Include="Pages\TTR\Tetyushi\" />
+    <Folder Include="Pages\TTR\Tukayevsk\" />
+    <Folder Include="Pages\TTR\Tyulyachi\" />
+    <Folder Include="Pages\TTR\Verkhneuslon\" />
+    <Folder Include="Pages\TTR\Vysokogorsk\" />
+    <Folder Include="Pages\TTR\Yelabuga\" />
+    <Folder Include="Pages\TTR\Yutazinsk\" />
+  </ItemGroup>
+
 </Project>

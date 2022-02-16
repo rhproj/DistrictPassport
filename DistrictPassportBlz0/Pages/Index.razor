@@ -2,8 +2,51 @@
 
 <PageTitle>Главная</PageTitle>
 
-<h1>Паспорта районов Республики Татарстан</h1>
+<h1 class="text-center">Паспорта районов Республики Татарстан</h1>
+<h2 class="text-center">Добро пожаловать</h2>
+<br/><br/>
+<div>
+    <AuthorizeView Roles="Aviastroy,Admin">
+        <Authorized>
+            <a href="ttr/kazan/aviastroyentry" class="text-decoration-none">
+                <p class="h2 text-center">Авиастроительный район г.Казани, ввод данных</p>
+            </a>    
+        </Authorized>
+    </AuthorizeView>   
+    <AuthorizeView Roles="Kirovsky,Admin">
+        <Authorized>
+            <a href="ttr/kazan/kirovskyentry" class="text-decoration-none">
+                <p class="h2 text-center">Кировский район г.Казани, ввод данных</p>
+            </a>    
+        </Authorized>
+    </AuthorizeView>    
+    <AuthorizeView Roles="Vakhitovsky,Admin">
+        <Authorized>
+            <a href="ttr/kazan/vakhitovskyentry" class="text-decoration-none">
+                <p class="h2 text-center">Вахитовский район г.Казани, ввод данных</p>
+            </a>    
+        </Authorized>
+    </AuthorizeView>    
+    <AuthorizeView Roles="Moskovsky,Admin">
+        <Authorized>
+            <a href="ttr/kazan/moskovskyentry" class="text-decoration-none">
+                <p class="h2 text-center">Московский район г.Казани, ввод данных</p>
+            </a>    
+        </Authorized>
+    </AuthorizeView>
 
-Добро пожаловать.
-
-@*<SurveyPrompt Title="How is Blazor working for you?" />*@
+    <AuthorizeView Roles="Zainsk,Admin">
+        <Authorized>
+            <a href="ttr/zainskentry" class="text-decoration-none">
+                <p class="h2 text-center">Заинский район, ввод данных</p>
+            </a>    
+        </Authorized>
+    </AuthorizeView>
+    <AuthorizeView Roles="Zelenodolsk,Admin">
+        <Authorized>
+            <a href="ttr/zelenodolskentry" class="text-decoration-none">
+                <p class="h2 text-center">Зеленодольский район, ввод данных</p>
+            </a>    
+        </Authorized>
+    </AuthorizeView>
+</div>

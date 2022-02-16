@@ -18,7 +18,7 @@
     private async Task SetUpAuth()
     {
 
-        string[] roles = { "Admin", "Zainsk","Zelenodolsk" };
+        string[] roles = { "Aviastroy","Kirovsky","Moskovsky" };
 
         foreach(var r in roles)
         {
@@ -27,15 +27,6 @@
             if(roleExists == false)
             {
                 await roleManager.CreateAsync(new IdentityRole(r));
-            }
-        }
-
-        var Admin = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Admin"));
-        if(Admin != null)
-        {
-            foreach (var role in roles)
-            {
-                await userManager.AddToRoleAsync(Admin, role);
             }
         }
 
@@ -51,23 +42,23 @@
         //    await userManager.AddToRoleAsync(Kazan, "Kazan");
         //}
 
-        //var Aviastroy = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Aviastroy"));
-        //if(Aviastroy != null)
-        //{
-        //    await userManager.AddToRoleAsync(Aviastroy, "Aviastroy");
-        //}
+        var Aviastroy = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Aviastroy"));
+        if(Aviastroy != null)
+        {
+            await userManager.AddToRoleAsync(Aviastroy, "Aviastroy");
+        }
 
-        //var Kirovsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Kirovsky"));
-        //if(Kirovsky != null)
-        //{
-        //    await userManager.AddToRoleAsync(Kirovsky, "Kirovsky");
-        //}
+        var Kirovsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Kirovsky"));
+        if(Kirovsky != null)
+        {
+            await userManager.AddToRoleAsync(Kirovsky, "Kirovsky");
+        }
 
-        //var Moskovsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Moskovsky"));
-        //if(Moskovsky != null)
-        //{
-        //    await userManager.AddToRoleAsync(Moskovsky, "Moskovsky");
-        //}
+        var Moskovsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Moskovsky"));
+        if(Moskovsky != null)
+        {
+            await userManager.AddToRoleAsync(Moskovsky, "Moskovsky");
+        }
 
         //var buauser = await userManager.FindByEmailAsync(config.GetValue<string>("BuaUser"));
         //if(buauser != null)
@@ -75,16 +66,25 @@
         //    await userManager.AddToRoleAsync(buauser, "bua");
         //}
 
-        var Zainsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Zainsk"));
-        if(Zainsk != null)
-        {
-            await userManager.AddToRoleAsync(Zainsk, "Zainsk");
-        }
+        //var Admin = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Admin"));
+        //if(Admin != null)
+        //{
+        //    foreach (var role in roles)
+        //    {
+        //        await userManager.AddToRoleAsync(Admin, role);
+        //    }
+        //}
 
-        var Zelenodolsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Zelenodolsk"));
-        if(Zelenodolsk != null)
-        {
-            await userManager.AddToRoleAsync(Zelenodolsk, "Zelenodolsk");
-        }
+        //var Zainsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Zainsk"));
+        //if(Zainsk != null)
+        //{
+        //    await userManager.AddToRoleAsync(Zainsk, "Zainsk");
+        //}
+
+        //var Zelenodolsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Zelenodolsk"));
+        //if(Zelenodolsk != null)
+        //{
+        //    await userManager.AddToRoleAsync(Zelenodolsk, "Zelenodolsk");
+        //}
     }
 }
