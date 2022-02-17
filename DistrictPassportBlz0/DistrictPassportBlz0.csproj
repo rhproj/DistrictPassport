@@ -47,6 +47,7 @@
     <Folder Include="Pages\TTR\Vysokogorsk\" />
     <Folder Include="Pages\TTR\Yelabuga\" />
     <Folder Include="Pages\TTR\Yutazinsk\" />
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
 </Project>
