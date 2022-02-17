@@ -18,7 +18,7 @@
     private async Task SetUpAuth()
     {
 
-        string[] roles = {"Kazan"};   //"Aviastroy","Kirovsky","Moskovsky" };
+        string[] roles = {"Kazan","Aviastroy","Kirovsky","Moskovsky","NovoSavinovsky","Privolzhsky","Sovetsky","Vakhitovsky","Agryz","Aksubayevo","Aktanysh","Alexeyevsk","Alkeyevsk","Almetyevsk","Apastovo","Arsk","Atninsk","Aznakayevo","Baltasi","Bavly","Bugulma","Buinsk","Chelny","Cheremshan","Chistopol","Drozhzhanovsk","KamskoUstyinsk","Kaybitsy","Kukmory","Laishevo","Leninogorsk","Mamadysh","Mendeleyevsk","Menzelinsk","Muslyumovo","Nizhnekamsk","Novosheshminsk","Nurlat","Pestrechinsk","RybSloboda","Sabinsk","Sarmanovo","Spassk","Tetyushi","Tukayevsk","Tyulyachi","Verkhneuslon","Vysokogorsk","Yelabuga","Yutazinsk","Zainsk","Zelenodolsk"};     //,"Cheremshan","Chistopol ","Drozhzhanovsk","KamskoUstyinsk","Kaybitsy","Kukmory","Laishevo","Leninogorsk","Mamadysh","Mendeleyevsk","Menzelinsk","Muslyumovo","Nizhnekamsk","Novosheshminsk","Nurlat","Pestrechinsk","RybSloboda","Sabinsk","Sarmanovo","Spassk","Tetyushi","Tukayevsk","Tyulyachi","Verkhneuslon","Vysokogorsk","Yelabuga","Yutazinsk"};    //"Kazan"};   //"Aviastroy","Kirovsky","Moskovsky" };
 
         foreach(var r in roles)
         {
@@ -30,11 +30,168 @@
             }
         }
 
+        //var Kazan = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Kazan"));
+        //if(Kazan != null)
+        //{
+        //    await userManager.AddToRoleAsync(Kazan, "Kazan");
+        //}
+
         var Kazan = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Kazan"));
-        if(Kazan != null)
-        {
-            await userManager.AddToRoleAsync(Kazan, "Kazan");
-        }
+                       if(Kazan != null) await userManager.AddToRoleAsync(Kazan, "Kazan");
+        
+        var Aviastroy = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Aviastroy"));
+                       if(Aviastroy != null) await userManager.AddToRoleAsync(Aviastroy, "Aviastroy");
+        
+        var Kirovsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Kirovsky"));
+                       if(Kirovsky != null) await userManager.AddToRoleAsync(Kirovsky, "Kirovsky");
+        
+        var Moskovsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Moskovsky"));
+                       if(Moskovsky != null) await userManager.AddToRoleAsync(Moskovsky, "Moskovsky");
+        
+        var NovoSavinovsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:NovoSavinovsky"));
+                       if(NovoSavinovsky != null) await userManager.AddToRoleAsync(NovoSavinovsky, "NovoSavinovsky");
+        
+        var Privolzhsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Privolzhsky"));
+                       if(Privolzhsky != null) await userManager.AddToRoleAsync(Privolzhsky, "Privolzhsky");
+        
+        var Sovetsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Sovetsky"));
+                       if(Sovetsky != null) await userManager.AddToRoleAsync(Sovetsky, "Sovetsky");
+        
+        var Vakhitovsky = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Vakhitovsky"));
+                       if(Vakhitovsky != null) await userManager.AddToRoleAsync(Vakhitovsky, "Vakhitovsky");
+        
+        var Agryz = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Agryz"));
+                       if(Agryz != null) await userManager.AddToRoleAsync(Agryz, "Agryz");
+        
+        var Aksubayevo = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Aksubayevo"));
+                       if(Aksubayevo != null) await userManager.AddToRoleAsync(Aksubayevo, "Aksubayevo");
+        
+        var Aktanysh = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Aktanysh"));
+                       if(Aktanysh != null) await userManager.AddToRoleAsync(Aktanysh, "Aktanysh");
+        
+        var Alexeyevsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Alexeyevsk"));
+                       if(Alexeyevsk != null) await userManager.AddToRoleAsync(Alexeyevsk, "Alexeyevsk");
+        
+        var Alkeyevsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Alkeyevsk"));
+                       if(Alkeyevsk != null) await userManager.AddToRoleAsync(Alkeyevsk, "Alkeyevsk");
+        
+        var Almetyevsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Almetyevsk"));
+                       if(Almetyevsk != null) await userManager.AddToRoleAsync(Almetyevsk, "Almetyevsk");
+        
+        var Apastovo = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Apastovo"));
+                       if(Apastovo != null) await userManager.AddToRoleAsync(Apastovo, "Apastovo");
+        
+        var Arsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Arsk"));
+                       if(Arsk != null) await userManager.AddToRoleAsync(Arsk, "Arsk");
+        
+        var Atninsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Atninsk"));
+                       if(Atninsk != null) await userManager.AddToRoleAsync(Atninsk, "Atninsk");
+        
+        var Aznakayevo = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Aznakayevo"));
+                       if(Aznakayevo != null) await userManager.AddToRoleAsync(Aznakayevo, "Aznakayevo");
+        
+        var Baltasi = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Baltasi"));
+                       if(Baltasi != null) await userManager.AddToRoleAsync(Baltasi, "Baltasi");
+        
+        var Bavly = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Bavly"));
+                       if(Bavly != null) await userManager.AddToRoleAsync(Bavly, "Bavly");
+        
+        var Bugulma = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Bugulma"));
+                       if(Bugulma != null) await userManager.AddToRoleAsync(Bugulma, "Bugulma");
+        
+        var Buinsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Buinsk"));
+                       if(Buinsk != null) await userManager.AddToRoleAsync(Buinsk, "Buinsk");
+        
+        var Chelny = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Chelny"));
+                       if(Chelny != null) await userManager.AddToRoleAsync(Chelny, "Chelny");
+        
+        var Cheremshan = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Cheremshan"));
+                       if(Cheremshan != null) await userManager.AddToRoleAsync(Cheremshan, "Cheremshan");
+        
+        var Chistopol  = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Chistopol"));
+                       if(Chistopol  != null) await userManager.AddToRoleAsync(Chistopol, "Chistopol");
+        
+        var Drozhzhanovsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Drozhzhanovsk"));
+                       if(Drozhzhanovsk != null) await userManager.AddToRoleAsync(Drozhzhanovsk, "Drozhzhanovsk");
+        
+        var KamskoUstyinsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:KamskoUstyinsk"));
+                       if(KamskoUstyinsk != null) await userManager.AddToRoleAsync(KamskoUstyinsk, "KamskoUstyinsk");
+        
+        var Kaybitsy = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Kaybitsy"));
+                       if(Kaybitsy != null) await userManager.AddToRoleAsync(Kaybitsy, "Kaybitsy");
+        
+        var Kukmory = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Kukmory"));
+                       if(Kukmory != null) await userManager.AddToRoleAsync(Kukmory, "Kukmory");
+        
+        var Laishevo = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Laishevo"));
+                       if(Laishevo != null) await userManager.AddToRoleAsync(Laishevo, "Laishevo");
+        
+        var Leninogorsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Leninogorsk"));
+                       if(Leninogorsk != null) await userManager.AddToRoleAsync(Leninogorsk, "Leninogorsk");
+        
+        var Mamadysh = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Mamadysh"));
+                       if(Mamadysh != null) await userManager.AddToRoleAsync(Mamadysh, "Mamadysh");
+        
+        var Mendeleyevsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Mendeleyevsk"));
+                       if(Mendeleyevsk != null) await userManager.AddToRoleAsync(Mendeleyevsk, "Mendeleyevsk");
+        
+        var Menzelinsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Menzelinsk"));
+                       if(Menzelinsk != null) await userManager.AddToRoleAsync(Menzelinsk, "Menzelinsk");
+        
+        var Muslyumovo = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Muslyumovo"));
+                       if(Muslyumovo != null) await userManager.AddToRoleAsync(Muslyumovo, "Muslyumovo");
+        
+        var Nizhnekamsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Nizhnekamsk"));
+                       if(Nizhnekamsk != null) await userManager.AddToRoleAsync(Nizhnekamsk, "Nizhnekamsk");
+        
+        var Novosheshminsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Novosheshminsk"));
+                       if(Novosheshminsk != null) await userManager.AddToRoleAsync(Novosheshminsk, "Novosheshminsk");
+        
+        var Nurlat = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Nurlat"));
+                       if(Nurlat != null) await userManager.AddToRoleAsync(Nurlat, "Nurlat");
+        
+        var Pestrechinsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Pestrechinsk"));
+                       if(Pestrechinsk != null) await userManager.AddToRoleAsync(Pestrechinsk, "Pestrechinsk");
+        
+        var RybSloboda = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:RybSloboda"));
+                       if(RybSloboda != null) await userManager.AddToRoleAsync(RybSloboda, "RybSloboda");
+        
+        var Sabinsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Sabinsk"));
+                       if(Sabinsk != null) await userManager.AddToRoleAsync(Sabinsk, "Sabinsk");
+        
+        var Sarmanovo = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Sarmanovo"));
+                       if(Sarmanovo != null) await userManager.AddToRoleAsync(Sarmanovo, "Sarmanovo");
+        
+        var Spassk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Spassk"));
+                       if(Spassk != null) await userManager.AddToRoleAsync(Spassk, "Spassk");
+        
+        var Tetyushi = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Tetyushi"));
+                       if(Tetyushi != null) await userManager.AddToRoleAsync(Tetyushi, "Tetyushi");
+        
+        var Tukayevsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Tukayevsk"));
+                       if(Tukayevsk != null) await userManager.AddToRoleAsync(Tukayevsk, "Tukayevsk");
+        
+        var Tyulyachi = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Tyulyachi"));
+                       if(Tyulyachi != null) await userManager.AddToRoleAsync(Tyulyachi, "Tyulyachi");
+        
+        var Verkhneuslon = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Verkhneuslon"));
+                       if(Verkhneuslon != null) await userManager.AddToRoleAsync(Verkhneuslon, "Verkhneuslon");
+        
+        var Vysokogorsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Vysokogorsk"));
+                       if(Vysokogorsk != null) await userManager.AddToRoleAsync(Vysokogorsk, "Vysokogorsk");
+        
+        var Yelabuga = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Yelabuga"));
+                       if(Yelabuga != null) await userManager.AddToRoleAsync(Yelabuga, "Yelabuga");
+        
+        var Yutazinsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Yutazinsk"));
+                       if(Yutazinsk != null) await userManager.AddToRoleAsync(Yutazinsk, "Yutazinsk");
+        
+        var Zainsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Zainsk"));
+                       if(Zainsk != null) await userManager.AddToRoleAsync(Zainsk, "Zainsk");
+        
+        var Zelenodolsk = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Zelenodolsk"));
+                       if(Zelenodolsk != null) await userManager.AddToRoleAsync(Zelenodolsk, "Zelenodolsk");
+
 
         //var Tatarstan = await userManager.FindByEmailAsync(config.GetValue<string>("Logins:Tatarstan"));
         //if(Tatarstan != null)
