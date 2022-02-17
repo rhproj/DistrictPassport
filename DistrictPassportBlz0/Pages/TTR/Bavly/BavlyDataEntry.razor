@@ -1,0 +1,10 @@
+﻿@page "/ttr/bavlyentry"
+
+<AuthorizeView Roles="Bavly,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Бавлинский район" OverviewPage="/ttr/bavlyoverview" DistrictTable="[dbo].[BavlyPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Бавлинский район" OverviewPage="/ttr/bavlyoverview" DistrictTable="[dbo].[BavlyPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

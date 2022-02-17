@@ -1,0 +1,10 @@
+﻿@page "/ttr/arskentry"
+
+<AuthorizeView Roles="Arsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Арский район" OverviewPage="/ttr/arskoverview" DistrictTable="[dbo].[ArskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Арский район" OverviewPage="/ttr/arskoverview" DistrictTable="[dbo].[ArskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

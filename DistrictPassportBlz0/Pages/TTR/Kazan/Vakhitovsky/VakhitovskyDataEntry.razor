@@ -1,0 +1,10 @@
+﻿@page "/ttr/kazan/vakhitovskyentry"
+
+<AuthorizeView Roles="Moskovsky,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Вахитовский район г.Казани" OverviewPage="/ttr/kazan/vakhitovskyoverview" DistrictTable="[dbo].[VakhitovskyPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Вахитовский район г.Казани" OverviewPage="/ttr/kazan/vakhitovskyoverview" DistrictTable="[dbo].[VakhitovskyPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

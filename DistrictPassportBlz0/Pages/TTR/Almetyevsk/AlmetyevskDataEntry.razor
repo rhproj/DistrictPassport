@@ -1,0 +1,10 @@
+﻿@page "/ttr/almetyevskentry"
+
+<AuthorizeView Roles="Almetyevsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Альметьевский район" OverviewPage="/ttr/almetyevskoverview" DistrictTable="[dbo].[AlmetyevskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Альметьевский район" OverviewPage="/ttr/almetyevskoverview" DistrictTable="[dbo].[AlmetyevskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

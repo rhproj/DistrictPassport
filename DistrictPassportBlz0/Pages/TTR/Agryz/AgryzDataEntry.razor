@@ -1,0 +1,10 @@
+﻿@page "/ttr/agryzentry"
+
+<AuthorizeView Roles="Agryz,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Агрызский район" OverviewPage="/ttr/agryzoverview" DistrictTable="[dbo].[AgryzPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Агрызский район" OverviewPage="/ttr/agryzoverview" DistrictTable="[dbo].[AgryzPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

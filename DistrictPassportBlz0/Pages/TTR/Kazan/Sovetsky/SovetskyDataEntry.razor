@@ -1,0 +1,10 @@
+﻿@page "/ttr/kazan/sovetskyentry"
+
+<AuthorizeView Roles="Sovetsky,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Советский район г.Казани" OverviewPage="/ttr/kazan/sovetskyoverview" DistrictTable="[dbo].[SovetskyPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Советский район г.Казани" OverviewPage="/ttr/kazan/sovetskyoverview" DistrictTable="[dbo].[SovetskyPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

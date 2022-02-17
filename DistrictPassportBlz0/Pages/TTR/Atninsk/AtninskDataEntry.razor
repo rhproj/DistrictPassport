@@ -1,0 +1,10 @@
+﻿@page "/ttr/atninskentry"
+
+<AuthorizeView Roles="Atninsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Атнинский район" OverviewPage="/ttr/atninskoverview" DistrictTable="[dbo].[AtninskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Атнинский район" OverviewPage="/ttr/atninskoverview" DistrictTable="[dbo].[AtninskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

@@ -20,30 +20,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\TTR\Agryz\" />
-    <Folder Include="Pages\TTR\Aksubayevo\" />
-    <Folder Include="Pages\TTR\Aktanysh\" />
-    <Folder Include="Pages\TTR\Alexeyevsk\" />
-    <Folder Include="Pages\TTR\Alkeyevsk\" />
-    <Folder Include="Pages\TTR\Almetyevsk\" />
-    <Folder Include="Pages\TTR\Apastovo\" />
-    <Folder Include="Pages\TTR\Arsk\" />
-    <Folder Include="Pages\TTR\Atninsk\" />
-    <Folder Include="Pages\TTR\Aznakayevo\" />
-    <Folder Include="Pages\TTR\Baltasi\" />
-    <Folder Include="Pages\TTR\Bavly\" />
-    <Folder Include="Pages\TTR\Bugulma\" />
-    <Folder Include="Pages\TTR\Buinsk\" />
-    <Folder Include="Pages\TTR\Chelny\" />
     <Folder Include="Pages\TTR\Cheremshan\" />
     <Folder Include="Pages\TTR\Chistopol\" />
     <Folder Include="Pages\TTR\Drozhzhanovsk\" />
     <Folder Include="Pages\TTR\KamskoUstyinsk\" />
     <Folder Include="Pages\TTR\Kaybitsy\" />
-    <Folder Include="Pages\TTR\Kazan\NovoSavinovsky\" />
-    <Folder Include="Pages\TTR\Kazan\Privolzhsky\" />
-    <Folder Include="Pages\TTR\Kazan\Sovetsky\" />
-    <Folder Include="Pages\TTR\Kazan\Vakhitovsky\" />
     <Folder Include="Pages\TTR\Kukmory\" />
     <Folder Include="Pages\TTR\Laishevo\" />
     <Folder Include="Pages\TTR\Leninogorsk\" />

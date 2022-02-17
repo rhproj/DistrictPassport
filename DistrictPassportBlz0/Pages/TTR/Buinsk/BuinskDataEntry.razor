@@ -1,0 +1,10 @@
+﻿@page "/ttr/buinskentry"
+
+<AuthorizeView Roles="Buinsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Буинский район" OverviewPage="/ttr/buinskoverview" DistrictTable="[dbo].[BuinskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Буинский район" OverviewPage="/ttr/buinskoverview" DistrictTable="[dbo].[BuinskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

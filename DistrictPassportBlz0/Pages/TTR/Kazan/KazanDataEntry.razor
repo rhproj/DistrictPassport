@@ -1,0 +1,10 @@
+﻿@page "/ttr/kazanentry"
+
+<AuthorizeView Roles="Kazan,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="г. Казань" OverviewPage="/ttr/kazanoverview" DistrictTable="[dbo].[KazanPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="г. Казань" OverviewPage="/ttr/kazanoverview" DistrictTable="[dbo].[KazanPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

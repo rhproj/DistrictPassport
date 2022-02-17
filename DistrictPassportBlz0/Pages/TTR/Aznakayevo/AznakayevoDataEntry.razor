@@ -1,0 +1,10 @@
+﻿@page "/ttr/aznakayevoentry"
+
+<AuthorizeView Roles="Aznakayevo,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Азнакаевский район" OverviewPage="/ttr/aznakayevoverview" DistrictTable="[dbo].[AznakayevoPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Азнакаевский район" OverviewPage="/ttr/aznakayevoverview" DistrictTable="[dbo].[AznakayevoPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

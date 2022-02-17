@@ -1,0 +1,10 @@
+﻿@page "/ttr/alkeyevskentry"
+
+<AuthorizeView Roles="Alkeyevsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Алькеевский район" OverviewPage="/ttr/alkeyevskoverview" DistrictTable="[dbo].[AlkeyevskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Алькеевский район" OverviewPage="/ttr/alkeyevskoverview" DistrictTable="[dbo].[AlkeyevskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

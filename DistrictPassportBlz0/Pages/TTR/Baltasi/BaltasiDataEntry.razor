@@ -1,0 +1,10 @@
+﻿@page "/ttr/baltasientry"
+
+<AuthorizeView Roles="Baltasi,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Балтасинский район" OverviewPage="/ttr/baltasioverview" DistrictTable="[dbo].[BaltasiPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Балтасинский район" OverviewPage="/ttr/baltasioverview" DistrictTable="[dbo].[BaltasiPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

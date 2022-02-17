@@ -15,20 +15,36 @@
             </NavLink>
         </div>
         <div class="nav-item px-3">
-            <NavLink class="nav-link" href="ttr/kazan/aviastroyentry">
-                <span class="oi oi-list-rich" aria-hidden="true"></span><p>Авиастроительный</p>
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/ttr/kazan/kirovskyentry">
-                <span class="oi oi-list-rich" aria-hidden="true"></span>Кировский
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="/ttr/kazan/moskovskyentry">
-                <span class="oi oi-list-rich" aria-hidden="true"></span>Московский район
-            </NavLink>
-        </div>
+             <NavLink class="nav-link" @onclick="ToggleShowKazan">
+                 <span class=@chevron aria-hidden="true"></span>Казань
+             </NavLink>
+         </div>
+        @if (showKazan)
+        {
+            <div class="border border-secondary">
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="ttr/kazanentry">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span><p>г. Казань</p>
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="ttr/kazan/aviastroyentry">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span><p>Авиастроительный</p>
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/ttr/kazan/kirovskyentry">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span>Кировский
+                    </NavLink>
+                </div>
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="/ttr/kazan/moskovskyentry">
+                        <span class="oi oi-list-rich" aria-hidden="true"></span>Московский район
+                    </NavLink>
+                </div>
+            </div>
+        }
+
         <div class="nav-item px-3">
             <NavLink class="nav-link" href="ttr/zainskentry">
                 <span class="oi oi-list-rich" aria-hidden="true"></span>Заинский
@@ -44,11 +60,20 @@
 
 @code {
     private bool collapseNavMenu = true;
+    private bool showKazan;
+    private string chevron = "oi oi-chevron-bottom";
 
     private string? NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
     private void ToggleNavMenu()
     {
         collapseNavMenu = !collapseNavMenu;
+    }
+
+    private void ToggleShowKazan()
+    {
+        showKazan = !showKazan;
+
+        chevron = chevron=="oi oi-chevron-bottom"?"oi oi-chevron-top":"oi oi-chevron-bottom";
     }
 }

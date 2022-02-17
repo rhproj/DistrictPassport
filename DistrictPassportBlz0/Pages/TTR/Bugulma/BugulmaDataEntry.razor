@@ -1,0 +1,10 @@
+﻿@page "/ttr/bugulmaentry"
+
+<AuthorizeView Roles="Bugulma,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Бугульминский район" OverviewPage="/ttr/bugulmaoverview" DistrictTable="[dbo].[BugulmaPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Бугульминский район" OverviewPage="/ttr/bugulmaoverview" DistrictTable="[dbo].[BugulmaPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

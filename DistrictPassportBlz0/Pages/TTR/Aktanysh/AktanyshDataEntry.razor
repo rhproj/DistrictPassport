@@ -1,0 +1,10 @@
+﻿@page "/ttr/aktanyshentry"
+
+<AuthorizeView Roles="Aktanysh,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Актанышский район" OverviewPage="/ttr/aktanyshoverview" DistrictTable="[dbo].[AktanyshPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Актанышский район" OverviewPage="/ttr/aktanyshoverview" DistrictTable="[dbo].[AktanyshPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

@@ -1,0 +1,10 @@
+﻿@page "/ttr/apastovoentry"
+
+<AuthorizeView Roles="Apastovo,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Апастовский район" OverviewPage="/ttr/apastoverview" DistrictTable="[dbo].[ApastovoPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Апастовский район" OverviewPage="/ttr/apastoverview" DistrictTable="[dbo].[ApastovoPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

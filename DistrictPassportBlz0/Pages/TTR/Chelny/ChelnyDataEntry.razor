@@ -1,0 +1,10 @@
+﻿@page "/ttr/chelnyentry"
+
+<AuthorizeView Roles="Zainsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Набережные Челны" OverviewPage="/ttr/chelnyoverview" DistrictTable="[dbo].[ChelnyPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Набережные Челны" OverviewPage="/ttr/chelnyoverview" DistrictTable="[dbo].[ChelnyPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>
