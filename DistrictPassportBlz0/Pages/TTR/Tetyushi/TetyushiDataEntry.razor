@@ -1,0 +1,9 @@
+﻿@page "/ttr/Tetyushientry"
+<AuthorizeView Roles="Tetyushi,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Тетюшский район" OverviewPage="/ttr/Tetyushioverview" DistrictTable="[dbo].[TetyushiPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Тетюшский район" OverviewPage="/ttr/Tetyushioverview" DistrictTable="[dbo].[TetyushiPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

@@ -1,0 +1,9 @@
+﻿@page "/ttr/Nizhnekamskentry"
+<AuthorizeView Roles="Nizhnekamsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Нижнекамский район" OverviewPage="/ttr/Nizhnekamskoverview" DistrictTable="[dbo].[NizhnekamskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Нижнекамский район" OverviewPage="/ttr/Nizhnekamskoverview" DistrictTable="[dbo].[NizhnekamskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

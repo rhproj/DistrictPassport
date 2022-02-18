@@ -1,0 +1,9 @@
+﻿@page "/ttr/Nurlatentry"
+<AuthorizeView Roles="Nurlat,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Нурлатский район" OverviewPage="/ttr/Nurlatoverview" DistrictTable="[dbo].[NurlatPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Нурлатский район" OverviewPage="/ttr/Nurlatoverview" DistrictTable="[dbo].[NurlatPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

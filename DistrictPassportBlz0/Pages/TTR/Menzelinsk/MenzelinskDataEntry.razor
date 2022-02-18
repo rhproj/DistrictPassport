@@ -1,0 +1,9 @@
+﻿@page "/ttr/Menzelinskentry"
+<AuthorizeView Roles="Menzelinsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Мензелинский район" OverviewPage="/ttr/Menzelinskoverview" DistrictTable="[dbo].[MenzelinskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Мензелинский район" OverviewPage="/ttr/Menzelinskoverview" DistrictTable="[dbo].[MenzelinskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

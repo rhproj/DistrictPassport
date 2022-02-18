@@ -1,0 +1,9 @@
+﻿@page "/ttr/Chistopolentry"
+<AuthorizeView Roles="Chistopol,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Чистопольский район" OverviewPage="/ttr/Chistopoloverview" DistrictTable="[dbo].[ChistopolPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Чистопольский район" OverviewPage="/ttr/Chistopoloverview" DistrictTable="[dbo].[ChistopolPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

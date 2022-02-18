@@ -1,0 +1,9 @@
+﻿@page "/ttr/KamskoUstyinskentry"
+<AuthorizeView Roles="KamskoUstyinsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Камско-Устьинский район" OverviewPage="/ttr/KamskoUstyinskoverview" DistrictTable="[dbo].[KamskoUstyinskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Камско-Устьинский район" OverviewPage="/ttr/KamskoUstyinskoverview" DistrictTable="[dbo].[KamskoUstyinskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

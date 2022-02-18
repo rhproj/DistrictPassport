@@ -1,0 +1,9 @@
+﻿@page "/ttr/Kukmoryentry"
+<AuthorizeView Roles="Kukmory,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Кукморский район" OverviewPage="/ttr/Kukmoryoverview" DistrictTable="[dbo].[KukmoryPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Кукморский район" OverviewPage="/ttr/Kukmoryoverview" DistrictTable="[dbo].[KukmoryPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

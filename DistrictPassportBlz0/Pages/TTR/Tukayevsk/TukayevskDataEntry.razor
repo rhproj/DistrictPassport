@@ -1,0 +1,9 @@
+﻿@page "/ttr/Tukayevskentry"
+<AuthorizeView Roles="Tukayevsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Тукаевский район" OverviewPage="/ttr/Tukayevskoverview" DistrictTable="[dbo].[TukayevskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Тукаевский район" OverviewPage="/ttr/Tukayevskoverview" DistrictTable="[dbo].[TukayevskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

@@ -1,0 +1,9 @@
+﻿@page "/ttr/Vysokogorskentry"
+<AuthorizeView Roles="Vysokogorsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Высокогорский район" OverviewPage="/ttr/Vysokogorskoverview" DistrictTable="[dbo].[VysokogorskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Высокогорский район" OverviewPage="/ttr/Vysokogorskoverview" DistrictTable="[dbo].[VysokogorskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

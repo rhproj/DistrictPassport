@@ -1,0 +1,9 @@
+﻿@page "/ttr/Muslyumovoentry"
+<AuthorizeView Roles="Muslyumovo,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Муслюмовский район" OverviewPage="/ttr/Muslyumovooverview" DistrictTable="[dbo].[MuslyumovoPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Муслюмовский район" OverviewPage="/ttr/Muslyumovooverview" DistrictTable="[dbo].[MuslyumovoPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

@@ -1,0 +1,9 @@
+﻿@page "/ttr/Sarmanovoentry"
+<AuthorizeView Roles="Sarmanovo,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Сармановский район" OverviewPage="/ttr/Sarmanovooverview" DistrictTable="[dbo].[SarmanovoPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Сармановский район" OverviewPage="/ttr/Sarmanovooverview" DistrictTable="[dbo].[SarmanovoPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

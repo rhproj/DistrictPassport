@@ -1,0 +1,9 @@
+﻿@page "/ttr/Yutazyentry"
+<AuthorizeView Roles="Yutazy,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Ютазинский район" OverviewPage="/ttr/Yutazyoverview" DistrictTable="[dbo].[YutazyPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Ютазинский район" OverviewPage="/ttr/Yutazyoverview" DistrictTable="[dbo].[YutazyPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

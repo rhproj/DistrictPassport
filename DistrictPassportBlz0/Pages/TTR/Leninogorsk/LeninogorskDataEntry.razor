@@ -1,0 +1,9 @@
+﻿@page "/ttr/Leninogorskentry"
+<AuthorizeView Roles="Leninogorsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Лениногорский район" OverviewPage="/ttr/Leninogorskoverview" DistrictTable="[dbo].[LeninogorskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Лениногорский район" OverviewPage="/ttr/Leninogorskoverview" DistrictTable="[dbo].[LeninogorskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

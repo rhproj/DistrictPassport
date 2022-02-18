@@ -1,0 +1,9 @@
+﻿@page "/ttr/RybSlobodaentry"
+<AuthorizeView Roles="RybSloboda,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Рыбно-Слободский район" OverviewPage="/ttr/RybSlobodaoverview" DistrictTable="[dbo].[RybSlobodaPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Рыбно-Слободский район" OverviewPage="/ttr/RybSlobodaoverview" DistrictTable="[dbo].[RybSlobodaPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

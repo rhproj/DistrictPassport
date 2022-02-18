@@ -1,0 +1,9 @@
+﻿@page "/ttr/Pestrechinskentry"
+<AuthorizeView Roles="Pestrechinsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Пестречинский район" OverviewPage="/ttr/Pestrechinskoverview" DistrictTable="[dbo].[PestrechinskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Пестречинский район" OverviewPage="/ttr/Pestrechinskoverview" DistrictTable="[dbo].[PestrechinskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

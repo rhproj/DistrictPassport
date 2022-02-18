@@ -1,0 +1,9 @@
+﻿@page "/ttr/Tyulyachientry"
+<AuthorizeView Roles="Tyulyachi,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Тюлячинский район" OverviewPage="/ttr/Tyulyachioverview" DistrictTable="[dbo].[TyulyachiPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Тюлячинский район" OverviewPage="/ttr/Tyulyachioverview" DistrictTable="[dbo].[TyulyachiPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

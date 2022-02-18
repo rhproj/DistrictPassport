@@ -1,0 +1,9 @@
+﻿@page "/ttr/Yelabugaentry"
+<AuthorizeView Roles="Yelabuga,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Елабужский район" OverviewPage="/ttr/Yelabugaoverview" DistrictTable="[dbo].[YelabugaPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Елабужский район" OverviewPage="/ttr/Yelabugaoverview" DistrictTable="[dbo].[YelabugaPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

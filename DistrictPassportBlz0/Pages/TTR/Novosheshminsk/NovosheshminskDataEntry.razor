@@ -1,0 +1,9 @@
+﻿@page "/ttr/Novosheshminskentry"
+<AuthorizeView Roles="Novosheshminsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Новошешминский район" OverviewPage="/ttr/Novosheshminskoverview" DistrictTable="[dbo].[NovosheshminskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Новошешминский район" OverviewPage="/ttr/Novosheshminskoverview" DistrictTable="[dbo].[NovosheshminskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

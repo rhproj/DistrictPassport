@@ -1,0 +1,9 @@
+﻿@page "/ttr/Laishevoentry"
+<AuthorizeView Roles="Laishevo,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Лаишевский район" OverviewPage="/ttr/Laishevooverview" DistrictTable="[dbo].[LaishevoPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Лаишевский район" OverviewPage="/ttr/Laishevooverview" DistrictTable="[dbo].[LaishevoPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

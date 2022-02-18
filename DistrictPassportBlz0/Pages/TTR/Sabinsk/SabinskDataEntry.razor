@@ -1,0 +1,9 @@
+﻿@page "/ttr/Sabinskentry"
+<AuthorizeView Roles="Sabinsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Сабинский район" OverviewPage="/ttr/Sabinskoverview" DistrictTable="[dbo].[SabinskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Сабинский район" OverviewPage="/ttr/Sabinskoverview" DistrictTable="[dbo].[SabinskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

@@ -1,0 +1,9 @@
+﻿@page "/ttr/Spasskentry"
+<AuthorizeView Roles="Spassk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Спасский район" OverviewPage="/ttr/Spasskoverview" DistrictTable="[dbo].[SpasskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Спасский район" OverviewPage="/ttr/Spasskoverview" DistrictTable="[dbo].[SpasskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

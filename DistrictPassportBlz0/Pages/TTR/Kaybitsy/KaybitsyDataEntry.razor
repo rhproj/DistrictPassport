@@ -1,0 +1,9 @@
+﻿@page "/ttr/Kaybitsyentry"
+<AuthorizeView Roles="Kaybitsy,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Кайбицкий район" OverviewPage="/ttr/Kaybitsyoverview" DistrictTable="[dbo].[KaybitsyPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Кайбицкий район" OverviewPage="/ttr/Kaybitsyoverview" DistrictTable="[dbo].[KaybitsyPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

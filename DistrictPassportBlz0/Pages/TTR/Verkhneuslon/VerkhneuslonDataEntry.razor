@@ -1,0 +1,9 @@
+﻿@page "/ttr/Verkhneuslonentry"
+<AuthorizeView Roles="Verkhneuslon,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Верхнеуслонский район" OverviewPage="/ttr/Verkhneuslonoverview" DistrictTable="[dbo].[VerkhneuslonPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Верхнеуслонский район" OverviewPage="/ttr/Verkhneuslonoverview" DistrictTable="[dbo].[VerkhneuslonPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

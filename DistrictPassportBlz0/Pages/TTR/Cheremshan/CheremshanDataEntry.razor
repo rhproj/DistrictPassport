@@ -1,0 +1,10 @@
+﻿@page "/ttr/Cheremshanentry"
+
+<AuthorizeView Roles="Cheremshan,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Черемшанский район" OverviewPage="/ttr/Cheremshanoverview" DistrictTable="[dbo].[CheremshanPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Черемшанский район" OverviewPage="/ttr/Cheremshanoverview" DistrictTable="[dbo].[CheremshanPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

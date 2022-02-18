@@ -1,0 +1,9 @@
+﻿@page "/ttr/Drozhzhanovskentry"
+<AuthorizeView Roles="Drozhzhanovsk,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Дрожжановский район" OverviewPage="/ttr/Drozhzhanovskoverview" DistrictTable="[dbo].[DrozhzhanovskPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Дрожжановский район" OverviewPage="/ttr/Drozhzhanovskoverview" DistrictTable="[dbo].[DrozhzhanovskPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>

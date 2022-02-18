@@ -1,0 +1,9 @@
+﻿@page "/ttr/Mamadyshentry"
+<AuthorizeView Roles="Mamadysh,Admin">
+    <Authorized>
+        <DataEntryComponent DistrictName="Мамадышский район" OverviewPage="/ttr/Mamadyshoverview" DistrictTable="[dbo].[MamadyshPsp]"></DataEntryComponent>
+    </Authorized>
+    <NotAuthorized>
+        <DataReadOnlyComponent DistrictName="Мамадышский район" OverviewPage="/ttr/Mamadyshoverview" DistrictTable="[dbo].[MamadyshPsp]"></DataReadOnlyComponent>
+    </NotAuthorized>
+</AuthorizeView>
