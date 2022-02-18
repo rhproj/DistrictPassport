@@ -94,7 +94,14 @@ else
           }
         </tr>
         <tr>
-          <td>7. Количество исполнительных производств по алиментам/должников</td>
+          <td>7. Количество исполнительных производств по алиментам</td>
+          @foreach(var p in passports)
+          {
+              <td>@p.AlimonyEP</td>
+          }
+        </tr>
+        <tr>
+          <td style="padding-left:50px"> - количество должников</td>
           @foreach(var p in passports)
           {
               <td>@p.AlimonyDebtors</td>

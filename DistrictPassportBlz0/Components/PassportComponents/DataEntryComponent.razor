@@ -26,7 +26,7 @@ else
                    </select>
               </div>
               <div class="p-2 bd-highlight">
-                  <InputDate @bind-Value="passport.EntryDate" class="form-control"></InputDate>
+                  <InputDate @bind-Value="passport.EntryDate" class="form-control" disabled="true"></InputDate>
               </div>
               @if(passpCollection.Count > 0)
               {
@@ -84,7 +84,11 @@ else
                   <td><InputNumber @bind-Value="passport.SopChildren" class="form-control"/></td>
                 </tr>
                 <tr>
-                  <td>7. Количество исполнительных производств по алиментам/должников</td>
+                  <td>7. Количество исполнительных производств по алиментам</td>
+                  <td><InputNumber @bind-Value="passport.AlimonyEP" class="form-control"/></td>
+                </tr>
+                <tr>
+                  <td style="padding-left:50px"> - количество должников</td>
                   <td><InputNumber @bind-Value="passport.AlimonyDebtors" class="form-control"/></td>
                 </tr>
                 <tr>
@@ -353,6 +357,9 @@ else
 
             <InputTextArea @bind-Value="passport.Comments" style="width: 100%;" placeholder="Примечание">
             </InputTextArea >
+            <div class="p-2 bd-highlight float-start">
+                  <InputDate @bind-Value="passport.EntryDate" class="form-control"></InputDate>
+            </div>
             </div>
                     <p class="h3 text-success text-end">@resultMsg</p>
                     <DataAnnotationsValidator/>

@@ -32,6 +32,8 @@ namespace DistrictPassportBlz0.Models
         [Range(0, int.MaxValue, ErrorMessage = msgNaturalNums)]
         public int SopChildren { get; set; }
         [Range(0, int.MaxValue, ErrorMessage = msgNaturalNums)]
+        public int AlimonyEP { get; set; }
+        [Range(0, int.MaxValue, ErrorMessage = msgNaturalNums)]
         public int AlimonyDebtors { get; set; }
         [Range(0, int.MaxValue, ErrorMessage = msgNaturalNums)]
         public int AlimonySumm { get; set; }

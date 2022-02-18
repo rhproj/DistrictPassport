@@ -15,6 +15,7 @@ namespace DistrictPassportLibrary.Models
         int ParentsRestoredPr { get; set; }
         int SopParents { get; set; }
         int SopChildren { get; set; }
+        int AlimonyEP { get; set; }
         int AlimonyDebtors { get; set; }
         int AlimonySumm { get; set; }
         int OnPrevRecords { get; set; }
