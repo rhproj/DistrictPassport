@@ -1,7 +1,7 @@
 ﻿@inject IPassportDataService passportData
 @inject NavigationManager UriHelper
 
-<h2>@DistrictName: Пасспорт района, ввод данных</h2>
+<h2>@DistrictName: пасспорт района</h2>
 @if(passport == null)
 {
     <h3>Загружается...</h3>
@@ -88,7 +88,7 @@ else
                   <td><InputNumber @bind-Value="passport.AlimonyDebtors" class="form-control"/></td>
                 </tr>
                 <tr>
-                  <td>8. Сумма долга по алиментам</td>
+                  <td>8. Сумма долга по алиментам (руб.)</td>
                   <td><InputNumber @bind-Value="passport.AlimonySumm" class="form-control"/></td>
                 </tr>
                 <tr>
