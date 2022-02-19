@@ -1,6 +1,6 @@
 ﻿<AuthorizeView>
     <Authorized>
-        <a href="Identity/Account/Manage">Текущий пользователь:  @context.User.Identity?.Name</a>
+        <a href="#" class="text-success text-decoration-none">Текущий пользователь:  @context.User.Identity?.Name</a>
         <form method="post" action="Identity/Account/LogOut">
             <button type="submit" class="nav-link btn btn-link">Выйти</button>
         </form>

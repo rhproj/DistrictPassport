@@ -8,11 +8,12 @@
 <div style="background-image: url('img/OL1000px.jpg'); height: 600px; background-repeat: no-repeat; background-position: center;">
     <h3 class="text-secondary text-center">Инструкция по заполнению пастпорта района:</h3>
     <ol class="h4 text-secondary">
-        <li>Для ввода данных по вашему району - войдите в систему с предоставленным логином и паролем (правый верхний угол: Войти). Перейти в свой район можно по ссылке снизу или через панель навигации слева</li>
+        <li>Для ввода данных по вашему району - войдите в систему с предоставленным логином и паролем (правый верхний угол: Войти). После входа, перейти в свой район можно по ссылке снизу или через панель навигации слева</li>
         <li>Выбор отчетного периода (год и квартал) выполнить до начала ввода данных. Если выбрать их после - данные сбросятся. Также данные не сохранятся, если покинуть страницу или перейти в другой район не нажав предварительно кнопку "Записать Данные".</li>
-        <li>Поля ввода принемают неотрицательные целые числа, без сокращений (50000 вместо 50 тыс.)</li>
+        <li>Поля ввода принемают неотрицательные целые числа, без сокращений (50000 вместо 50 тыс.) Если данных нет, оставьте - 0.</li>
         <li>Перед нажатием кнопки "Записать Данные" укажите дату записи данных в конце таблицы.</li>
-        <li>Можно сохранить таблицу заполнив её не до конца, продолжить и также исправить данные в любое время, выбрав год и квартал.</li>
+        <li>Можно сохранить таблицу заполнив её не до конца, продолжить и также исправить данные в любое время, выбрав соответствующий год и квартал.</li>
+@*        <li>При наличии примичаний по текущему кварталу, их можно изложить внизу таблицы в специальном поле</li>*@
     </ol>
     <br/>
     <AuthorizeView Roles="Kazan,Admin">
@@ -26,51 +27,51 @@
     <AuthorizeView Roles="Aviastroy,Admin">
         <Authorized>
             <a href="ttr/kazan/aviastroyentry" class="text-decoration-none">
-                <p class="h2 text-center">Авиастроительный район г.Казани, ввод данных</p>
+                <p class="h2 text-center">Авиастроительный район г. Казани, ввод данных</p>
             </a>    
         </Authorized>
     </AuthorizeView>   
     <AuthorizeView Roles="Kirovsky,Admin">
         <Authorized>
             <a href="ttr/kazan/kirovskyentry" class="text-decoration-none">
-                <p class="h2 text-center">Кировский район г.Казани, ввод данных</p>
+                <p class="h2 text-center">Кировский район г. Казани, ввод данных</p>
             </a>    
         </Authorized>
     </AuthorizeView>    
     <AuthorizeView Roles="Vakhitovsky,Admin">
         <Authorized>
             <a href="ttr/kazan/vakhitovskyentry" class="text-decoration-none">
-                <p class="h2 text-center">Вахитовский район г.Казани, ввод данных</p>
+                <p class="h2 text-center">Вахитовский район г. Казани, ввод данных</p>
             </a>    
         </Authorized>
     </AuthorizeView>    
     <AuthorizeView Roles="Moskovsky,Admin">
         <Authorized>
             <a href="ttr/kazan/moskovskyentry" class="text-decoration-none">
-                <p class="h2 text-center">Московский район г.Казани, ввод данных</p>
+                <p class="h2 text-center">Московский район г. Казани, ввод данных</p>
             </a>    
         </Authorized>
     </AuthorizeView>
     <AuthorizeView Roles="NovoSavinovsky,Admin">
         <Authorized>
-            <a href="ttr/novosavinovskyentry" class="text-decoration-none">
-                <p class="h2 text-center">Ново-Савиновский район, ввод данных</p>
+            <a href="ttr/kazan/novosavinovskyentry" class="text-decoration-none">
+                <p class="h2 text-center">Ново-Савиновский район г. Казани, ввод данных</p>
             </a>    
         </Authorized>
     </AuthorizeView>
     
     <AuthorizeView Roles="Privolzhsky,Admin">
         <Authorized>
-            <a href="ttr/privolzhskyentry" class="text-decoration-none">
-                <p class="h2 text-center">Приволжский район, ввод данных</p>
+            <a href="ttr/kazan/privolzhskyentry" class="text-decoration-none">
+                <p class="h2 text-center">Приволжский район г. Казани, ввод данных</p>
             </a>    
         </Authorized>
     </AuthorizeView>
     
     <AuthorizeView Roles="Sovetsky,Admin">
         <Authorized>
-            <a href="ttr/sovetskyentry" class="text-decoration-none">
-                <p class="h2 text-center">Советский район, ввод данных</p>
+            <a href="ttr/kazan/sovetskyentry" class="text-decoration-none">
+                <p class="h2 text-center">Советский район г. Казани, ввод данных</p>
             </a>    
         </Authorized>
     </AuthorizeView>
