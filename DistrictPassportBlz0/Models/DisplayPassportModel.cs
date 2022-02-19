@@ -13,9 +13,9 @@ namespace DistrictPassportBlz0.Models
         public int QuarterInfo { get; set; }
         [DateTimeValidation]
         public DateTime EntryDate { get; set; }
-        [Range(1, int.MaxValue, ErrorMessage = msgNaturalNums)]
+        [Range(1, int.MaxValue, ErrorMessage = "Население района не может = 0")]
         public int DistrPopulation { get; set; }
-        [Range(0, int.MaxValue, ErrorMessage = "Население района не может = 0")]
+        [Range(0, int.MaxValue, ErrorMessage = msgNaturalNums)]
         public int Marriages { get; set; }
         [Range(0, int.MaxValue, ErrorMessage = msgNaturalNums)]
         public int Divorces { get; set; }
