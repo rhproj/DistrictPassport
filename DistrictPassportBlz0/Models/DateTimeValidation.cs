@@ -10,7 +10,7 @@ namespace DistrictPassportBlz0.Models
         {
             var date = (DateTime)value;
 
-            if (DateTime.Compare(date, new DateTime(2000)) < 0) return new ValidationResult(GetErrorMessage());
+            if (DateTime.Compare(date, new DateTime(2000,1,1)) < 0) return new ValidationResult(GetErrorMessage());
             else return ValidationResult.Success;
         }
 
