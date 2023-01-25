@@ -13,7 +13,17 @@
         </div>
 
         <article class="content px-4">
-            @Body
+            <ErrorBoundary Context="Exception">
+                <ChildContent>
+                    @Body
+                </ChildContent>
+                <ErrorContent>
+                    <div class="alert bg-danger text-white alert-dismissible">
+                        <p class="my-custom-class">Произошла ошибка, свяжитесь с отделом информационных технологий</p>
+                        Детали исключения: @Exception.GetType(): @Exception.Message
+                    </div>
+                </ErrorContent>
+            </ErrorBoundary>
         </article>
     </main>
 </div>
