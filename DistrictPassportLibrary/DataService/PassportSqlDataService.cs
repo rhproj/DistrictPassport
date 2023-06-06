@@ -32,14 +32,6 @@ namespace DistrictPassportLibrary.DataService
             return passports.ToList<IPassportModel>();
         }
 
-        //public async Task<IPassportModel> QReadPasspQuarterly(string district, int quart, int year)
-        //{
-        //    var passports = await _dataAccess.QLoadData<PassportModel, dynamic>(
-        //        $"SELECT [YearInfo],[QuarterInfo],[DistrPopulation],[Marriages],[Divorces] from {district} WHERE [QuarterInfo] = {quart} and [YearInfo] = {year}",
-        //        new { }, "SQLDataConnection");
-        //    return passports.FirstOrDefault<IPassportModel>();
-        //}
-
         public async Task QAddData(IPassportModel passport, string district)
         {
             var passp = new
